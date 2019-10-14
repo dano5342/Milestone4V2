@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{ user.username }}</h1>
+    {% if user.username == user.username %}
+        <h4> {{ user.email }}</h4>
+        <h4> {{ user.first_name }} {{ user.last_name }} </h4>
+        <a href="{% url 'edit_profile.html' %}"></a>
+    {% endif %}
+{% endblock %}
