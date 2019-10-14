@@ -1,0 +1,16 @@
+bin
+lib
+include
+*/__pycache__/*
+__pycache__/
+.Python
+env.py
+*.pyc
+*.sqlite3
+.coverage
+.vscode/
+stashed_items/*
+.sass-cache/*
+main.scss/*
+static/styles/.sass-cache/*
+media/images/*
