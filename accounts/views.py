@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib import messages
-from .forms import UserRegistrationForm
+from .forms import UserRegistrationForm, ProfileUpdate, UpdateForm
 
 def register(request):
     """ 
@@ -23,10 +23,25 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'profile.html')
+    """
+    Returns the Users profile page, In the template only the logged
+    in user can view the forms and personal data such as address etc.
+    Other users may view the Username, Profile picture and about section.
+    """
+    if request.method == 'POST':
+        update_form = UpdateForm(request.POST, instance=request.user)
+        profile_form = ProfileUpdate(request.POST, request.FILES,
+                                     instance=request.user.profile)
+        if update_form.is_valid() and profile_form.is_valid():
+            update_form.save()
+            profile_form.save()
+            messages.success(request, f'Your account has been successfully updated')
+            return redirect('profile')
+    else:
+        update_form = UpdateForm(instance=request.user)
+        profile_form = ProfileUpdate(instance=request.user.profile)
 
-
-@login_required
-def edit_profile(request):
-    
-    return render(request, 'edit_profile.html')
+    form_contexts = {
+        'update_form': update_form,
+        'profile_form': profile_form}
+    return render(request, 'profile.html', form_contexts)
