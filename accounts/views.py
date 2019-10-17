@@ -24,3 +24,9 @@ def register(request):
 @login_required
 def profile(request):
     return render(request, 'profile.html')
+
+
+@login_required
+def edit_profile(request):
+    
+    return render(request, 'edit_profile.html')

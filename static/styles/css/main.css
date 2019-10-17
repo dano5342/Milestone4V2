@@ -1,6 +1,14 @@
 /* Navbar */
 /* Main */
 /* Content */
+/* Product Styles */
+/* Profile Styles */
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px; }
+
 /* Footer */
 #sticky-footer {
   flex-shrink: none; }
