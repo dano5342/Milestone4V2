@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib import messages
-from .forms import UserRegistrationForm, ProfileUpdate, UpdateForm
+from .forms import UserRegistrationForm, ProfileUpdate, UpdateForm, AddressUpdate
 
 def register(request):
     """ 
@@ -32,16 +32,21 @@ def profile(request):
         update_form = UpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdate(request.POST, request.FILES,
                                      instance=request.user.profile)
-        if update_form.is_valid() and profile_form.is_valid():
+        address_form = AddressUpdate(request.POST, instance=request.user)
+
+        if update_form.is_valid() and profile_form.is_valid() and address_form.is_valid():
             update_form.save()
             profile_form.save()
+            address_form.save()
             messages.success(request, f'Your account has been successfully updated')
             return redirect('profile')
     else:
         update_form = UpdateForm(instance=request.user)
         profile_form = ProfileUpdate(instance=request.user.profile)
+        address_form = AddressUpdate()
 
     form_contexts = {
         'update_form': update_form,
-        'profile_form': profile_form}
+        'profile_form': profile_form,
+        'address_form': address_form}
     return render(request, 'profile.html', form_contexts)
