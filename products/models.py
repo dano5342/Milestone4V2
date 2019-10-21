@@ -1,5 +1,4 @@
 from django.db import models
-from annoying.fields import AutoOneToOneField
 from django.contrib.auth.models import User
 
 

@@ -1,35 +1,37 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="content-section">
-  <div class="media">
-    <div class="row">
-      <div class="col">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-        <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
+<div class="container">
+  <div class="content-section">
+    <div class="media">
+      <div class="row">
+        <div class="col">
+          <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+          <div class="media-body">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Your Address Details:</h4>
+          {{ address1 }}
+          {{ address2 }}
         </div>
       </div>
-      <div class="col">
-        <h4>Your Address Details:</h4>
-        {{ user.address1 }}
-        {{ user.address2 }}
+    </div>
+    <!-- Update Profile/User form -->
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Change Information?</legend>
+        {{ update_form | crispy }}
+        {{ profile_form | crispy }}
+        {{ address_form | crispy }}
+      </fieldset>
+      <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">Update.</button>
       </div>
-    </div>
+    </form>
   </div>
-  <!-- Update Profile/User form -->
-  <form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <fieldset class="form-group">
-      <legend class="border-bottom mb-4">Change Information?</legend>
-      {{ update_form | crispy }}
-      {{ profile_form | crispy }}
-      {{ address_form | crispy }}
-    </fieldset>
-    <div class="form-group">
-      <button class="btn btn-outline-info" type="submit">Update.</button>
-    </div>
-  </form>
 </div>
 {% endblock content %}

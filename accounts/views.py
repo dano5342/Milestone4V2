@@ -32,7 +32,7 @@ def profile(request):
         update_form = UpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdate(request.POST, request.FILES,
                                      instance=request.user.profile)
-        address_form = AddressUpdate(request.POST, instance=request.user)
+        address_form = AddressUpdate(request.POST, instance=request.user.address)
 
         if update_form.is_valid() and profile_form.is_valid() and address_form.is_valid():
             update_form.save()
