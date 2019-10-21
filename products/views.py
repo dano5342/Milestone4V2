@@ -16,6 +16,6 @@ def all_products(request, category_id=None):
 
 
 def more_info(request, product_id):
-    product = get_object_or_404(Product, product_id)
-    detailed_args = {'product': product}
+    product = get_object_or_404(Product, pk=product_id)
+    detailed_args = {'product': product, 'product_id': product_id}
     return render(request, "prod_detail.html", detailed_args)
