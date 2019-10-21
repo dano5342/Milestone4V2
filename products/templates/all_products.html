@@ -10,7 +10,7 @@
                 <p class="product-description">{{ product.summary }}</p>
                 <p>{{ product.price }}</p>
                 <p>Sold By: {{product.sold_by}}</p>
-                <a href="{% url 'more info' product.id%} ">More info</a>
+                <a href="{% url 'more info' product.id%}">More info</a>
                 <form method="post" action="">
                     {% csrf_token %}
                     <div class="input-group">
