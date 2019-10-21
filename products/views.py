@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from .models import Product, Category
 # Create your views here.
 def all_products(request, category_id=None):
@@ -13,3 +13,9 @@ def all_products(request, category_id=None):
         products = Product.objects.filter(Category, category_id)
     prod_args = {"products": products}
     return render(request, "products.html", prod_args)
+
+
+def more_info(request, product_id):
+    product = get_object_or_404(Product, product_id)
+    detailed_args = {'product': product}
+    return render(request, "prod_detail.html", detailed_args)
