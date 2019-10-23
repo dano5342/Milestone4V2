@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{{ product.name }}
-{{ product.summary }}
-{{ product.product_type}}
+<div class="container">
+    <div class="row  info-container">
+        <div class="col">
+            <div class="card title-card">
+                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+                <h1>{{ product.title }}</h1>
+                <h4>{{ product.category}}</h4>
+                <p>{{ product.summary }}</p>
+                <em>
+                    <p>{{ product.price }}</p>
+                    <p>Sold by: {{ product.sold_by}}</p>
+                </em>
+            </div>
 
-{{ product.description}}
-
+        </div>
+        <div class="col description-col">
+            <div class="card desc-card">
+                <p>{{ product.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -8,9 +8,10 @@ def index(request, category_id=None):
     Displays all products (in future with pagination, and 
     category displays only displaying items within the category)
     """
+    category = Category.objects.all()
     if not category_id:
         products = Product.objects.all()
     else:
         products = Product.objects.filter(Category, category_id)
-    prod_args = {"products": products}
-    return render(request, 'index.html', prod_args)
+    args = {"products": products, 'category': category}
+    return render(request, 'index.html', args)

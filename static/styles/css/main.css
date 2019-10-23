@@ -2,6 +2,20 @@
 /* Main */
 /* Content */
 /* Product Styles */
+.info-container {
+  margin: 4px 10px; }
+
+.title-card {
+  padding-top: 50px;
+  padding-bottom: 25px; }
+
+.description-col {
+  padding: 4px 4px;
+  margin: 4px 10px; }
+
+.desc-card {
+  padding: 10px; }
+
 /* Profile Styles */
 .account-img {
   height: 125px;
