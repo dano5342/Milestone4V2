@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
+<div class="container-fluid">
     <div class="row  info-container">
         <div class="col">
             <div class="card title-card">
-                <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.title}}">
-                <h1>{{ product.title }}</h1>
-                <h4>{{ product.category}}</h4>
-                <p>{{ product.summary }}</p>
-                <em>
-                    <p>{{ product.price }}</p>
-                    <p>Sold by: {{ product.sold_by}}</p>
-                </em>
+                <div class="row">
+                    <div class="col">
+                        <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.title}}" class="product-image">
+                    </div>
+                    <div class="col">
+                        <h1>{{ product.title }}</h1>
+                        <h4>{{ product.category}}</h4>
+                        <p>{{ product.summary }}</p>
+                        <em>
+                            <p>{{ product.price }}</p>
+                            <p>Sold by: {{ product.sold_by}}</p>
+                        </em>
+                    </div>
+                </div>
             </div>
 
         </div>
