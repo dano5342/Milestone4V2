@@ -5,7 +5,7 @@
     <div class="row  info-container">
         <div class="col">
             <div class="card title-card">
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+                <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.title}}">
                 <h1>{{ product.title }}</h1>
                 <h4>{{ product.category}}</h4>
                 <p>{{ product.summary }}</p>
