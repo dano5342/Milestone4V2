@@ -8,7 +8,9 @@ def index(request, category_id=None):
     Displays all products (in future with pagination, and 
     category displays only displaying items within the category)
     """
+    products = Product.objects.all()
     category = Category.objects.all()
+    
     if not category_id:
         products = Product.objects.all()
     else:
