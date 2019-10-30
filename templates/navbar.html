@@ -21,7 +21,9 @@
                         <label for="{{ category.category }}">{{category.category}}</label>
                      </div>
                      {% endfor %}
-                     <button action="submit"> Apply Filter</button>
+                     {% if category %}
+                        <button action="submit"> Apply Filter</button>
+                     {% endif %}
                  </form>
              </ul>
              <ul class="navbar-nav ml-auto">
