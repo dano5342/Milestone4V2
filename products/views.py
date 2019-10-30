@@ -11,6 +11,7 @@ def all_products(request, category_name=None):
     selected = None
 
 
+
     if category_name:
         category = get_object_or_404(Category, category_name)
         products = Product.objects.filter(category=category)
@@ -18,8 +19,7 @@ def all_products(request, category_name=None):
 
     if request.GET.getlist('category'):
         selected = Category.objects.filter(
-            category__in=request.GET.getlist(category))
-        print(category)
+            category__in=request.GET.getlist('category'))
         products = [product for product in products if product.category in selected]
 
 

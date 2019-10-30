@@ -20,7 +20,7 @@ def index(request, category_name=None):
 
     if request.GET.getlist('category'):
         selected = Category.objects.filter(
-            type__in=request.GET.getlist(category))
+            category__in=request.GET.getlist(category))
         products = [product for product in products if product.category in selected]
         print(products)
         print(selected)
