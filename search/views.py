@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from products.models import Product
 
-# Create your views here.
+
+def search(request):
+    products = Product.objects.filter(title__icontains=request.GET['q'])
+    context = {'products': products}
+    return render(request, 'all_products.html', context)

@@ -21,6 +21,7 @@ from django.contrib.auth import views as auth_views
 from home.urls import urlpatterns as index_pat
 from accounts.urls import urlpatterns as acc_pat
 from products.urls import urlpatterns as prod_pat
+from search.urls import urlpatterns as search_pat
 from .settings import MEDIA_ROOT
 from django.views.static import serve
 
@@ -31,6 +32,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name="login.html"), name="login"),
     path('logout/', auth_views.LogoutView.as_view(template_name="logout.html"), name="logout"),
     path('products/', include(prod_pat)),
+    path('search/', include(search_pat)),
     re_path(r'^media/(?P<path>.*)$', serve,
             {'document_root': MEDIA_ROOT}),
 ]
