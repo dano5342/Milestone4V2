@@ -1,7 +1,9 @@
 from django.urls import path, re_path
-from .views import more_info
+from .views import more_info, all_products
 
 
 urlpatterns = [
-    re_path(r'^(?P<product_id>\d+)/$', more_info, name="more info")
+    path('', all_products, name="products"),
+    re_path(r'^(?P<product_id>\d+)/$', more_info, name="more info"),
+    re_path(r'^(?P<category>[-\w]+)/$', all_products, name="products")
 ]

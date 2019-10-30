@@ -12,7 +12,6 @@ class Product(models.Model):
     title = models.CharField(max_length=40)
     summary = models.CharField(max_length=120)
     description = models.TextField(max_length=500, blank=False)
-    sold_by = models.ForeignKey(User, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=9, decimal_places=2)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default="")
     image = models.ImageField(upload_to="images", null=True)
