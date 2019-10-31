@@ -23,6 +23,7 @@ from accounts.urls import urlpatterns as acc_pat
 from products.urls import urlpatterns as prod_pat
 from search.urls import urlpatterns as search_pat
 from cart.urls import urlpatterns as cart_pat
+from checkout.urls import urlpatterns as check_pat
 from .settings import MEDIA_ROOT
 from django.views.static import serve
 
@@ -35,6 +36,7 @@ urlpatterns = [
     path('products/', include(prod_pat)),
     path('search/', include(search_pat)),
     path('cart/', include(cart_pat)),
+    path('checkout/', include(check_pat)),
     re_path(r'^media/(?P<path>.*)$', serve,
             {'document_root': MEDIA_ROOT}),
 ]
