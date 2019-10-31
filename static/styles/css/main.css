@@ -32,6 +32,12 @@
   margin-right: 20px;
   margin-bottom: 16px; }
 
+/* Cart Styling */
+.cart-image {
+  width: 300px;
+  height: 300px; }
+
+/* Checkout Styling */
 /* Footer */
 #sticky-footer {
   flex-shrink: none; }
