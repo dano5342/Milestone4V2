@@ -2,11 +2,9 @@
 {% load static from staticfiles %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
     <div class="row row-flex">
-
         {% for item in cart_items %}
-
         <div class="row cart-row">
             <div class="col">
                 <img src="{{MEDIA_URL}}{{item.product.image}}" alt="{{item.product.title}}"
@@ -19,7 +17,6 @@
             </div>
             <div class="col amend-prod">
                 <p>
-
                     <form class="form-inline" method="post" action="{% url 'change_cart' item.id %}">
                         {% csrf_token %}
                         {{ form | crispy }}
