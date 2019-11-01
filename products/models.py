@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 class Category(models.Model):
     category = models.CharField(max_length=40)
     image = models.ImageField(upload_to='images', null=True)
+    description = models.TextField(max_length=1000, null=True)
     def __str__(self):
         return self.category
 

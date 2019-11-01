@@ -9,10 +9,21 @@
         <p>Scroll down to learn more</p>
     </div>
 </div>
-<div class="container">
-    <div class="row row-flex">
-        {% for category in category %}
+<div class="container categories">
+    {% for category in category %}
+    <div class="categories">
+        <div class="row row-flex">
+            <div class="col">
+                <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
+            </div>
+            <div class="col">
+                <h2>{{ category.category }}</h2>
+                <p>{{category.description}}</p>
+            </div>
+            <div class="col"></div>
+        </div>
     </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
