@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from products.models import Product, Category
 
-
 # Create your views here.
 def index(request, category_name=None):
     """
@@ -25,6 +24,6 @@ def index(request, category_name=None):
         print(products)
         print(selected)
 
-
+    
     args = {'products': products, 'category': category}
     return render(request, 'index.html', args)

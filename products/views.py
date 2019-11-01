@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from .models import Product, Category
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
 # Create your views here.
 def all_products(request, category_name=None):
     """
@@ -21,6 +23,16 @@ def all_products(request, category_name=None):
         selected = Category.objects.filter(
             category__in=request.GET.getlist('category'))
         products = [product for product in products if product.category in selected]
+
+    paginator = Paginator(products, 12)
+    page = request.GET.get('page', 1)
+
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
 
 
     args = {'products': products, 'category': category}
