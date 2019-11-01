@@ -3,21 +3,15 @@
 /* Mixins */
 /* Navbar */
 #navbar {
-  overflow: hidden; }
-
-.navy {
-  background-color: #4D6C73;
-  box-shadow: 1px; }
-
-.blue {
-  background-color: #567D8C;
-  box-shadow: 2px; }
+  overflow: hidden;
+  background-color: #F2F2F2; }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999; }
+  z-index: 999;
+  opacity: 0.8; }
 
 /* Main */
 body,
@@ -28,6 +22,9 @@ html {
   font-family: 'Arima Maduri', sans-serif;
   font-weight: 500;
   background-color: #F2F2F2; }
+
+.push {
+  padding-top: 67px; }
 
 .landing-title {
   font-size: 52px; }

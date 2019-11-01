@@ -22,22 +22,15 @@ $d-brown: #59331D;
 /* Navbar */
 #navbar {
   overflow: hidden;
-  
-}
-.navy{
-  background-color: $navy;
-  box-shadow: 1px;
+  background-color: $white;
 }
 
-.blue {
-  background-color: $blue;
-  box-shadow: 2px;
-}
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
+  opacity: 0.8;
 }
 /* Main */
 body,
@@ -47,6 +40,10 @@ html {
     height: 100%;
     @include text;
     background-color: $white;
+}
+
+.push {
+  padding-top: 67px;
 }
 .landing-title{
   font-size: 52px;

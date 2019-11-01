@@ -1,10 +1,22 @@
-window.onscroll = function() {myFunction()};
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+$('document').ready(function(){
+  var stickyNavTop = $('#navbar').offset().top;
+  var stickyNav = function(){
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > stickyNavTop){
+      $('#navbar').addClass('sticky'); 
+    }else {
+      $('#navbar').removeClass('sticky');
+    }
+  };
+
+  //Call the sticky navbar function
+stickyNav();
+$(window).scroll(function(){
+  stickyNav();
+});
+
+  $('#landing').scroll(function(){
+    $(this).addClass('push')
+  });
+
+});

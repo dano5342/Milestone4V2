@@ -19,8 +19,9 @@
     {% endblock head_js%}
 </head>
 
-<body>
     {% block nav %} {% include 'navbar.html' %} {% endblock %}
+
+<body id="body">
     {% if messages %}
     <div class="alert alert-success">
         <div class="messages">
@@ -34,6 +35,7 @@
 
 
 
+</body>
     {% block footer %} {% include 'footer.html' %} {% endblock %}
     <!-- Scripts for importing, maybe leave this as a partial template further down the line-->
 
@@ -44,6 +46,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="{% static 'scripts/js/custom.js'%}"></script>
-</body>
 
 </html>
