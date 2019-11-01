@@ -4,8 +4,10 @@ $('document').ready(function(){
     var scrollTop = $(window).scrollTop();
     if (scrollTop > stickyNavTop){
       $('#navbar').addClass('sticky'); 
+      $('#body').addClass('push');
     }else {
       $('#navbar').removeClass('sticky');
+      $('#body').removeClass('push');
     }
   };
 
@@ -14,9 +16,5 @@ stickyNav();
 $(window).scroll(function(){
   stickyNav();
 });
-
-  $('#landing').scroll(function(){
-    $(this).addClass('push')
-  });
 
 });
