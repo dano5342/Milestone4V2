@@ -1,7 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:500|Norican&display=swap");
+/* Colors */
+/* Mixins */
 /* Navbar */
 /* Main */
-.add-prod {
-  margin: 3px; }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arima Maduri', sans-serif;
+  font-weight: 500; }
+
+.landing-title {
+  font-size: 52px; }
+
+.title {
+  font-family: 'Norican', sans-serif;
+  font-weight: 500; }
+
+.img-container {
+  min-width: 100% !important;
+  min-height: 100% !important;
+  position: relative;
+  text-align: center;
+  color: #F2F2F2; }
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.landing-image {
+  max-width: 100%;
+  max-height: 80%; }
 
 /* Content */
 /* Product Styles */

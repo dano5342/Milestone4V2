@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+<div class="img-container">
+    <img src="{% static 'images/atlas.jpeg'%}" alt="Atlas and compass" class="img landing-image">
+    <div class="centered">
+        <h1 class="title landing-title">Antiques, Curiouse & Artefacts</h1>
+        <p>Antiquities and curiousities sourced from around the world.</p>
+    </div>
+</div>
 <div class="container">
-    <div class="row row-flex">
+    <div class="row row-flex">  
+        
         {% for product in products %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="card">
