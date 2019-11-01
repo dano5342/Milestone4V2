@@ -46,4 +46,10 @@ This project will make use of a collection of tech's that I've used so far throu
 ##### Content
 ##### Media
 + Compass & Atlas credit: Ylanite Kloppens: https://www.pexels.com/photo/beige-analog-gauge-697662/ 
++ Books image (BOOKS) credit: Suzy Hazelwood: https://www.pexels.com/photo/low-light-photography-of-books-1301585/
++ Other image credit: Paula (Pexels): https://www.pexels.com/photo/brown-wooden-drumstick-beside-brown-wooden-case-179959/
++ Medieval armor image credit: Ott Maidre: https://www.pexels.com/photo/medieval-armor-2046779/
++ Roman Coin medallion image credit: Wikimedia/Walters art museum: https://commons.wikimedia.org/wiki/File:Roman_-_Medallion_with_Alexander_the_Great_-_Walters_591_-_Obverse.jpg
++ Jewellery image Staatliche Antikensammlungen [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)]
++ Furniture image credit: Freddy: pexels.com/photo/brown-wooden-armchair-2168227/
 ##### Honourable Mentions
