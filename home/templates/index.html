@@ -9,6 +9,7 @@
         <p>Scroll down to learn more</p>
     </div>
 </div>
+<br>
 <div class="container categories">
     {% for category in category %}
     <div class="categories">
@@ -19,8 +20,8 @@
             <div class="col">
                 <h2>{{ category.category }}</h2>
                 <p>{{category.description}}</p>
+                <p><a href="{% url 'products' %}?category={{category.category}}"></a></p>
             </div>
-            <div class="col"></div>
         </div>
     </div>
     {% endfor %}
