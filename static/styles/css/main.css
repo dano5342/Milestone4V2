@@ -50,9 +50,40 @@ html {
   max-width: 100%;
   max-height: 80%; }
 
+.bar {
+  background-color: #4D6C73;
+  padding: 4px;
+  border: 4px; }
+
+.categories {
+  padding-top: 15px;
+  background-color: #8C7A64; }
+
 .info-image {
-  width: 500px !important;
-  height: 500px !important; }
+  width: 350px !important;
+  height: 350px !important;
+  align-items: center;
+  border-radius: 20px; }
+
+.cat-row {
+  padding: 14px; }
+
+.link-unstyled, .link-unstyled:visited, .link-unstyled:hover, .link-unstyled:active, .link-unstyled:focus, .link-unstyled:active:hover {
+  font-style: inherit;
+  color: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  text-decoration: none;
+  font-variant: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  border-radius: inherit;
+  border: inherit;
+  outline: inherit;
+  box-shadow: inherit;
+  padding: inherit;
+  vertical-align: inherit; }
 
 /* Content */
 /* Product Styles */
