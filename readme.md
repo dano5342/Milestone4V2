@@ -45,4 +45,5 @@ This project will make use of a collection of tech's that I've used so far throu
 #### Credits
 ##### Content
 ##### Media
++ Compass & Atlas credit: Ylanite Kloppens: https://www.pexels.com/photo/beige-analog-gauge-697662/ 
 ##### Honourable Mentions

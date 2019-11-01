@@ -20,7 +20,25 @@ $d-brown: #59331D;
 }
 
 /* Navbar */
+#navbar {
+  overflow: hidden;
+  
+}
+.navy{
+  background-color: $navy;
+  box-shadow: 1px;
+}
 
+.blue {
+  background-color: $blue;
+  box-shadow: 2px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
 /* Main */
 body,
 html {
@@ -28,6 +46,7 @@ html {
     padding: 0;
     height: 100%;
     @include text;
+    background-color: $white;
 }
 .landing-title{
   font-size: 52px;
@@ -93,6 +112,8 @@ html {
 .cart-row{}
 
 .amend-prod{}
+
+
 .cart-image{
   width: 300px;
   height: 300px;

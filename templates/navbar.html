@@ -1,6 +1,6 @@
  {% block nav %}
- <header class="fixed">
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <header id="navbar">
+     <nav class="navbar navbar-expand-lg navbar-light navy">
          <a class="navbar-brand title" href="{% url 'home' %}">Antiques, Curiouse & Artefacts</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
              </ul>
          </div>
      </nav>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark align-center">
+     <nav class="navbar navbar-expand-lg navbar-dark blue  align-center">
          <div class="align-center mx-auto">
              <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="GET">
                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
