@@ -30,6 +30,7 @@ This project will make use of a collection of tech's that I've used so far throu
 
 #### Testing
 + To be written
++ PDB - using it to debug stripe payments in the console.
 + Travis write up
 + Unit Testing
 + User Stories Testing Manually testing.
