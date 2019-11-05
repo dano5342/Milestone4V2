@@ -26,7 +26,11 @@
             <div class="col">
                 <h2 class="title">{{ category.category }}</h2>
                 <p class="text">{{category.description}}</p>
+                {% if category._id == 3 %}
+                <p><a class="link-unstyled" href="">See More:</a></p>
+                {% else %}
                 <p><a class="link-unstyled" href="{% url 'products' %}?category={{category.category}}">See More:</a></p>
+                {% endif %}
             </div>
         </div>
         {% endfor %}
