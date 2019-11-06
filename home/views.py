@@ -1,6 +1,5 @@
-from django.shortcuts import render, get_object_or_404
-from products.models import Category
-
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from products.models import Category, Product
 # Create your views here.
 def index(request, category_name=None):
     """
@@ -8,7 +7,6 @@ def index(request, category_name=None):
     category displays only displaying items within the category)
     """
     category = Category.objects.all()
-
-    
     args = {'category': category}
+    
     return render(request, 'index.html', args)
