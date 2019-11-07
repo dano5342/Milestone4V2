@@ -44,7 +44,9 @@ html {
   min-height: 100% !important;
   position: relative;
   text-align: center;
-  color: #F2F2F2; }
+  -webkit-filter: grayscale(100%);
+  /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); }
 
 .centered {
   position: absolute;
@@ -55,16 +57,12 @@ html {
 .bottom-right {
   position: absolute;
   bottom: 8px;
-  right: 16px; }
+  right: 16px;
+  color: black; }
 
 .landing-image {
   max-width: 100%;
   max-height: 80%; }
-
-.bar {
-  background-color: #4D6C73;
-  padding: 4px;
-  border: 4px; }
 
 .categories {
   padding-top: 15px; }
@@ -144,7 +142,8 @@ html {
 /* Checkout Styling */
 /* Footer */
 #sticky-footer {
-  flex-shrink: none; }
+  flex-shrink: none;
+  background-color: #404040; }
 
 /* Media Queries */
 

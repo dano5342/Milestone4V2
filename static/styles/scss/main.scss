@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:500|Norican&display=swap');
 /* Colors */
-$blue: #567D8C;
-$navy: #4D6C73;
-$white: #F2F2F2;
-$l-brown: #8C7A64;
-$d-brown: #59331D;
 
+$white: #F2F2F2;
+$cream: #F2D0A7;
+$dark: #404040;
+$brown: #BF9969;
+$mahog: #735A3D;
+$gold: #BF9039;
 /* Mixins */
 @mixin title{
   font-family: 'Norican', sans-serif;
@@ -63,7 +64,8 @@ html {
   min-height: 100%!important;
   position: relative;
   text-align: center;
-  color: $white;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); 
 }
 
 .centered {
@@ -76,18 +78,13 @@ html {
   position: absolute;
   bottom: 8px;
   right: 16px;
+  color: black
 }
 
 .landing-image {
   max-width: 100%;
   max-height: 80%;
 
-}
-
-.bar {
-  background-color: $navy;
-  padding: 4px ;
-  border: 4px;
 }
 
 .categories{
@@ -187,8 +184,9 @@ html {
 /* Checkout Styling */
 /* Footer */
 #sticky-footer {
-    flex-shrink: none;}
-
+    flex-shrink: none;
+    background-color: $dark
+  }
 /* Media Queries */
 
 
