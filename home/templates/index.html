@@ -14,28 +14,29 @@
         <h4><a class="link-unstyled" href="{% url 'products' %}">Continue to all products <i class="fas fa-arrow-right"></i></a></h4>
     </div>
 </div>
-<br>
-
+<div class="container-fluid">
 <div class="container categories">
 
     <div class="categories">
-        {% for category in category %}
-        <div class="row row-flex cat-row">
-            <div class="col cat-col">
-                <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
-            </div>
-            <div class="col">
-                <h2 class="title">{{ category.category }}</h2>
-                <p class="text">{{category.description}}</p>
+        <div class="row">
+            {% for category in category %}
+            <div class="cat-container text-center">
                 {% if category.category == 'Arms & Armour' %}
-                    <p><a class="link-unstyled" href="{% url 'products'%}?category=Arms+%26+Armour">See More:</a></p>
+                <a class="link-unstyled" href="{% url 'products'%}?category=Arms+%26+Armour">
+                    <h2 class="title">{{ category.category }}</h2>
+                    <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
+                </a>
                 {% else %}
-                    <p><a class="link-unstyled" href="{% url 'products' %}?category={{category.category}}">See More:</a></p>
+                <a class="link-unstyled" href="{% url 'products' %}?category={{category.category}}">
+                    <h2 class="title">{{ category.category }}</h2>
+                    <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
+                </a>
                 {% endif %}
                 </div>
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
     </div>
 </div>
-
+</div>
 {% endblock %}

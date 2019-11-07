@@ -92,7 +92,6 @@ html {
 
 .categories{
   padding-top: 15px;
-  background-color: $l-brown;
 }
 
 .info-image{
@@ -126,6 +125,17 @@ html {
     box-shadow: inherit;
     padding: inherit;
     vertical-align: inherit;
+  }
+}
+
+.cat-container{
+  padding:4px;
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+  &:hover{
+    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); 
   }
 }
 /* Content */

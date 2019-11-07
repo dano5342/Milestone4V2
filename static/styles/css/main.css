@@ -67,8 +67,7 @@ html {
   border: 4px; }
 
 .categories {
-  padding-top: 15px;
-  background-color: #8C7A64; }
+  padding-top: 15px; }
 
 .info-image {
   width: 350px !important;
@@ -95,6 +94,18 @@ html {
   box-shadow: inherit;
   padding: inherit;
   vertical-align: inherit; }
+
+.cat-container {
+  padding: 4px;
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%);
+  /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%);
+  /* FF 35+ */ }
+  .cat-container:hover {
+    -webkit-filter: grayscale(100%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%); }
 
 /* Content */
 /* Product Styles */
