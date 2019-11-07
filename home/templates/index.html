@@ -5,16 +5,17 @@
     <img src="{% static 'images/atlas.jpeg'%}" alt="Atlas and compass" class="img landing-image">
     <div class="centered">
         <h1 class="title landing-title">Antiques, Curiouse & Artefacts</h1>
-        <p>Antiquities and curiousities sourced from around the world.</p>
-        <p>Scroll down to learn more</p>
+        <div class="landing-text">
+            <p>Antiquities and curiousities sourced from around the world.</p>
+            <p class="small">Scroll down to learn more</p>
+        </div>
+    </div>
+    <div class="bottom-right">
+        <h4><a class="link-unstyled" href="{% url 'products' %}">Continue to all products <i class="fas fa-arrow-right"></i></a></h4>
     </div>
 </div>
 <br>
-<div class="container-fluid bar">
-    <div class="container">
-        <h4><a href="{% url 'products' %}">Continue to all products <i class="fas fa-arrow-right"></i></a></h4>
-    </div>
-</div>
+
 <div class="container categories">
 
     <div class="categories">
