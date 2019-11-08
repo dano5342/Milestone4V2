@@ -16,13 +16,13 @@ def all_products(request, category_name=None):
 
     if category_name:
         category = get_object_or_404(Category, category_name)
-        products = Product.objects.filter(category=category)
+        products = Product.objects.filter(category=category).order_by(products.pubd)
 
 
     if request.GET.getlist('category'):
         selected = Category.objects.filter(
-            category__in=request.GET.getlist('category'))
-        products = [product for product in products if product.category in selected]
+            category__in=request.GET.getlist('category')).order_by(products.pubd)
+        products = [product for product in products if product.category in selected].order_by(products.pubd)
 
     paginator = Paginator(products, 12)
     page = request.GET.get('page', 1)
