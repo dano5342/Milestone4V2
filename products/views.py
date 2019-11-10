@@ -16,13 +16,13 @@ def all_products(request, category_name=None):
 
     if category_name:
         category = get_object_or_404(Category, category_name)
-        products = Product.objects.filter(category=category).order_by(products.pubd)
+        products = Product.objects.filter(category=category).order_by('-pubd')
 
 
     if request.GET.getlist('category'):
         selected = Category.objects.filter(
-            category__in=request.GET.getlist('category')).order_by(products.pubd)
-        products = [product for product in products if product.category in selected].order_by(products.pubd)
+            category__in=request.GET.getlist('category'))
+        products = [product for product in products if product.category in selected]
 
     paginator = Paginator(products, 12)
     page = request.GET.get('page', 1)
@@ -46,5 +46,7 @@ def more_info(request, product_id):
     so it is added here.
     """
     product = get_object_or_404(Product, pk=product_id)
-    detailed_args = {'product': product, 'product_id': product_id}
+    category = Category.objects.all()
+    #more_products = Product.objects.filter(category=category)[:6]
+    detailed_args = {'product': product, 'product_id': product_id} #'more_products': more_products}
     return render(request, "prod_detail.html", detailed_args)
