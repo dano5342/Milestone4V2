@@ -39,7 +39,12 @@ def all_products(request, category_name=None):
 
 
 class MoreInfo(DetailView):
-
+    """
+    This view is for seeing more detail into the product
+    The detailed description is removed from the homepage
+    so it is added here. ALso for viewing extra products
+    similar to that being viewed.
+    """
 
     model = Product
     template_name = 'prod_detail.html'
@@ -64,16 +69,3 @@ class MoreInfo(DetailView):
         product = self.get_object()
         category = self.category
         return redirect(reverse('prod_detail.html', kwargs={'pk': product.pk}))
-
-        
-#def more_info(request, product_id):
-    """
-    This view is for seeing more detail into the product
-    The detailed description is removed from the homepage
-    so it is added here.
-    """
-    #product = get_object_or_404(Product, pk=product_id)
-    #category = Category.objects.all()
-    #more_products = Product.objects.filter(category=category)[:6]
-    #detailed_args = {'product': product, 'product_id': product_id} #'more_products': more_products}
-    #return render(request, "prod_detail.html", detailed_args)

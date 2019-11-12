@@ -127,6 +127,14 @@ html {
 .desc-card {
   padding: 10px; }
 
+.panel-default {
+  border-color: transparent;
+  padding: 0 10px; }
+
+.panel-body {
+  height: 100%;
+  border: 1px solid #ddd; }
+
 /* Profile Styles */
 .account-img {
   height: 125px;
