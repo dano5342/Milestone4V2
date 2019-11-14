@@ -58,7 +58,7 @@ class MoreInfo(DetailView):
 
         self.extra_context['product'] = instance
         self.extra_context['more_prods'] = Product.objects.all().filter(category=instance.category).exclude(id=_id).order_by('-pubd')[:6]
-
+        self.extra_context['category'] = Category.objects.all()
         return instance
 
 
