@@ -164,6 +164,9 @@ html {
   flex-shrink: none;
   background-color: #404040; }
 
+.unordered {
+  list-style-type: none; }
+
 /* Media Queries */
 
 /*# sourceMappingURL=main.css.map */
