@@ -6,12 +6,19 @@
   overflow: hidden;
   background-color: #F2F2F2; }
 
+#searchbar {
+  justify-content: center;
+  align-content: center; }
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
   opacity: 0.8; }
+
+.cart-link {
+  color: #404040 !important; }
 
 /* Main */
 body,
@@ -134,6 +141,10 @@ html {
 .panel-body {
   height: 100%;
   border: 1px solid #ddd; }
+
+.card-img-top {
+  max-height: 250px;
+  min-height: 250px; }
 
 /* Profile Styles */
 .account-img {

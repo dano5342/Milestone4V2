@@ -19,9 +19,9 @@
                                 {% csrf_token %}
                                 <div class="input-group" class="quantity">
                                     <input name="quantity" type="number" min="1" max="999" class="form-control"
-                                        placeholder="Quantity">
+                                        placeholder="Quantity" default="1">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-success" type="submit">Add</button>
+                                        <button class="btn btn-success" type="submit"> <i class="fas fa-cart-plus"></i></button>
                                     </span>
                                 </div>
                             </form>
