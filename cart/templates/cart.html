@@ -5,6 +5,7 @@
 <div class="container-fluid">
     <div class="row row-flex">
         {% for item in cart_items %}
+        {% if item %}
         <div class="row cart-row">
             <div class="col">
                 <img src="{{MEDIA_URL}}{{item.product.image}}" alt="{{item.product.title}}"
@@ -40,13 +41,16 @@
             </div>
         </div>
         <br>
+        {% else %}
+        <H4> Nothing to see here, would you like to <a href="{% url 'products' %}">see more?</a></H4>
+        {% endif %}
         {% endfor %}
-        
+
         <div class="col">
             <p>Total</p>
             <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-            <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign"
-                    aria-hidden="true"></span>Checkout</a>
+            <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span
+                    class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
         </div>
 
     </div>
