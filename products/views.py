@@ -6,8 +6,8 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 # Create your views here.
 def all_products(request, category_name=None):
     """
-    Displays all products (in future with pagination, and 
-    category displays only displaying items within the category)
+    Displays all products, with the option of declaring
+    a filter for categorizing the items
     """
     products = Product.objects.all()
     category = Category.objects.all()
@@ -23,7 +23,7 @@ def all_products(request, category_name=None):
             category__in=request.GET.getlist('category'))
         products = [product for product in products if product.category in selected]
 
-    paginator = Paginator(products, 6)
+    paginator = Paginator(products, 9)
     page = request.GET.get('page', 1)
 
     try:
