@@ -11,41 +11,45 @@
                         <a href="{% url 'more info' product.id%}" class="link-unstyled">
                             <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.title}}"
                                 class="card-img-top img-fluid">
+
+                            <div class="card-body">
+                                <h3>{{ product.title }}</h3>
+                                <p class="product-description">{{ product.summary }}</p>
+                                <p>{{ product.price }}</p>
+                            </div>
                         </a>
-                        <div class="card-body">
-                            <h3>{{ product.title }}</h3>
-                            <p class="product-description">{{ product.summary }}</p>
-                            <p>{{ product.price }}</p>
-                        </div>
                     </div>
                 </div>
             </div>
             {% endfor %}
-            <div class="paginator">
+        </div>
+    </div>
+    <div class="row">
+        <nav>
+            <div class="paginator justify-content-center">
                 {% if products.has_other_pages %}
-                <ul class="pagination">
+                <ul class="pagination justify-content-center">
                     {% if products.has_previous %}
-                    <li><a href="?page={{ products.previous_page_number }}">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}"><i class="fas fa-arrow-left"></i></a></li>
                     {% else %}
-                    <li class="disabled"><span>&laquo;</span></li>
+                    <li class="disabled page-item"><i class="fas fa-arrow-left"></i></li>
                     {% endif %}
                     {% for i in products.paginator.page_range %}
                     {% if products.number == i %}
-                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                    <li class="page-item active page-link"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
                     {% else %}
-                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
                     {% endif %}
                     {% endfor %}
                     {% if products.has_next %}
-                    <li><a href="?page={{ products.next_page_number }}">&raquo;</a></li>
+                    <li class="page-item page-link"><a href="?page={{ products.next_page_number }}"><i class="fas fa-arrow-right"></i></a></li>
                     {% else %}
-                    <li class="disabled"><span>&raquo;</span></li>
+                    <li class="disabled page-item"><i class="fas fa-arrow-right"></i></li>
                     {% endif %}
                 </ul>
                 {% endif %}
             </div>
-        </div>
+        </nav>
     </div>
 </div>
-
 {% endblock %}
