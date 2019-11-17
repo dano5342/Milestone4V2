@@ -1,7 +1,7 @@
  {% block nav %}
  <header id="navbar">
      <nav class="navbar navbar-expand-lg navbar-light navy">
-         <a class="navbar-brand title" href="{% url 'home' %}">Antiques, Curiouse & Artefacts</a>
+         <a class="navbar-brand title" href="{% url 'index' %}">Antiques, Curiouse & Artefacts</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav mr-auto">
                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'home' %}">Home</a>
+                     <a class="nav-link" href="{% url 'index' %}">Home</a>
                  </li>
                  <li class="nav-item">
                      <a href="{% url 'products' %}" class="nav-link">All Products</a>
@@ -25,9 +25,6 @@
              </div>
              <ul class="navbar-nav ml-auto">
                  {% if user.is_authenticated %}
-                 <li class="nav-item">
-                     <a class="nav-link" href="{% url 'profile' %}">Profile</a>
-                 </li>
                  <li class="nav-item">
                      <a class="nav-link" href="{% url 'logout' %} ">Logout</a>
                  </li>
@@ -48,9 +45,6 @@
                          Cart</a>
                  </li>
          </div>
-     </nav>
-     <nav class="navbar navbar-expand-lg navbar-dark blue  align-center navbar-nav">
-
      </nav>
  </header>
  {% endblock %}

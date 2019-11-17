@@ -23,7 +23,7 @@ def all_products(request, category_name=None):
             category__in=request.GET.getlist('category'))
         products = [product for product in products if product.category in selected]
 
-    paginator = Paginator(products, 12)
+    paginator = Paginator(products, 6)
     page = request.GET.get('page', 1)
 
     try:
