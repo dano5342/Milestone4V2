@@ -69,6 +69,7 @@ Disclaimer: I Do not own any of the images and or photos mentioned herein below,
 + [Powder Flask](https://www.metmuseum.org/art/collection/search/22391) Public Domain
 + [Steel Shield](https://www.metmuseum.org/art/collection/search/25415) Public Domain
 + [Saber & Scabbard](https://www.metmuseum.org/art/collection/search/22871?&searchField=All&sortBy=Relevance&what=Gold&ft=Sword&offset=20&rpp=20&amp;pos=24) Public Domain
++ [Rapier](https://www.metmuseum.org/art/collection/search/24860?&searchField=All&sortBy=Relevance&what=Gold&ft=Rapier&offset=0&rpp=20&amp;pos=11)
 ###### Furniture Credits
 + [Ornamental Jade Disk](https://www.harvardartmuseums.org/collections/object/204830) Public Domain (Educational Purposes)
 + [Commode](https://www.metmuseum.org/art/collection/search/206990?&searchField=All&sortBy=Relevance&what=Engraving&ft=*&offset=0&rpp=20&amp;pos=4) Public Domain
