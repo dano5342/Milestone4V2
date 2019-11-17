@@ -130,7 +130,7 @@ USE_TZ = True
 
 
 AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Decs 2099 20:00:00 GMT',
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
     'CacheControl': 'max-age=9460800'
 }
 
@@ -143,6 +143,8 @@ AWS_S3_CUTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
