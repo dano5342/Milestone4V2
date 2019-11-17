@@ -10,9 +10,9 @@ class Category(models.Model):
         return self.category
 
 class Product(models.Model):
-    title = models.CharField(max_length=40)
-    summary = models.CharField(max_length=120)
-    description = models.TextField(max_length=500, blank=False)
+    title = models.CharField(max_length=120)
+    summary = models.CharField(max_length=240)
+    description = models.TextField(max_length=1000, blank=False)
     price = models.DecimalField(max_digits=9, decimal_places=2)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default="")
     image = models.ImageField(upload_to="images", null=True)

@@ -6,12 +6,19 @@
   overflow: hidden;
   background-color: #F2F2F2; }
 
+#searchbar {
+  justify-content: center;
+  align-content: center; }
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
   opacity: 0.8; }
+
+.cart-link {
+  color: #404040 !important; }
 
 /* Main */
 body,
@@ -97,12 +104,9 @@ html {
   padding: 4px;
   transition: filter .5s ease-in-out;
   -webkit-filter: grayscale(0%);
-  /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(0%);
-  /* FF 35+ */ }
+  filter: grayscale(0%); }
   .cat-container:hover {
     -webkit-filter: grayscale(100%);
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: grayscale(100%); }
 
 /* Content */
@@ -129,11 +133,15 @@ html {
 
 .panel-default {
   border-color: transparent;
-  padding: 0 10px; }
+  padding: 10px 7px; }
 
 .panel-body {
   height: 100%;
   border: 1px solid #ddd; }
+
+.card-img-top {
+  max-height: 250px;
+  min-height: 250px; }
 
 /* Profile Styles */
 .account-img {
@@ -152,6 +160,9 @@ html {
 #sticky-footer {
   flex-shrink: none;
   background-color: #404040; }
+
+.unordered {
+  list-style-type: none; }
 
 /* Media Queries */
 

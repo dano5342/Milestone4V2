@@ -25,7 +25,10 @@ $gold: #BF9039;
   overflow: hidden;
   background-color: $white;
 }
-
+#searchbar {
+  justify-content: center;
+  align-content: center;
+}
 .sticky {
   position: fixed;
   top: 0;
@@ -33,6 +36,10 @@ $gold: #BF9039;
   z-index: 999;
   opacity: 0.8;
 }
+.cart-link{
+  color: $dark!important;
+}
+
 /* Main */
 body,
 html {
@@ -128,14 +135,17 @@ html {
 .cat-container{
   padding:4px;
   transition: filter .5s ease-in-out;
-  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(0%); /* FF 35+ */
+  -webkit-filter: grayscale(0%); 
+  filter: grayscale(0%); 
   &:hover{
-    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    -webkit-filter: grayscale(100%); 
   filter: grayscale(100%); 
   }
 }
 /* Content */
+.titl-tran{
+   
+}
 
 /* Product Styles */
 .info-container {
@@ -162,13 +172,19 @@ html {
 }
 .panel-default {
   border-color: transparent;
-  padding: 0 10px;
+  padding: 10px 7px;
 }
 
 .panel-body{
   height: 100%;
   border: 1px solid #ddd;
 }
+
+.card-img-top{
+  max-height: 250px;
+  min-height: 250px;
+}
+
 
 /* Profile Styles */
 .account-img{
@@ -199,6 +215,9 @@ html {
     flex-shrink: none;
     background-color: $dark
   }
+.unordered {
+  list-style-type:none;
+}
 /* Media Queries */
 
 

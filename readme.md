@@ -43,13 +43,51 @@ This project will make use of a collection of tech's that I've used so far throu
 
 
 #### Credits
+A lot of the imagery and photos received inspiration from the posters at [reddits artefact subreddit](https://www.reddit.com/r/ArtefactPorn/)
 ##### Content
 ##### Media
+Disclaimer: I Do not own any of the images and or photos mentioned herein below, with all certainty have I tried to credit the author/owner where required and free to use/public domain images have been credited where possible too. 
+
+
+
 + Compass & Atlas credit: Ylanite Kloppens: https://www.pexels.com/photo/beige-analog-gauge-697662/ 
 + Books image (BOOKS) credit: Suzy Hazelwood: https://www.pexels.com/photo/low-light-photography-of-books-1301585/
 + Other image credit: Paula (Pexels): https://www.pexels.com/photo/brown-wooden-drumstick-beside-brown-wooden-case-179959/
 + Medieval armor image credit: Ott Maidre: https://www.pexels.com/photo/medieval-armor-2046779/
 + Roman Coin medallion image credit: Wikimedia/Walters art museum: https://commons.wikimedia.org/wiki/File:Roman_-_Medallion_with_Alexander_the_Great_-_Walters_591_-_Obverse.jpg
-+ Jewellery image Staatliche Antikensammlungen [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)]
++ Jewellery image Staatliche Antikensammlungen [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
 + Furniture image credit: Freddy: pexels.com/photo/brown-wooden-armchair-2168227/
+###### Jewellery Credits
++ [Scythian Golden Comb](https://commons.wikimedia.org/wiki/File:Scythian_comb.jpg) Public Domain
++ [Byzantine Marriage Ring](https://upload.wikimedia.org/wikipedia/commons/a/a3/Byzantine_-_Marriage_Ring_-_Walters_571715_-_Top.jpg) Public Domain
++ [Norse Spurs](https://www.khm.uio.no/english/visit-us/historical-museum/exhibitions/viking-age/) C5905 in Oldsaksamlingen at Kulturhistorisk Museum,  Museum of Cultural History / UiO
++ [Pendant](https://www.metmuseum.org/art/collection/search/39461?&searchField=All&sortBy=Relevance&what=Gold&ft=*&offset=0&rpp=20&amp;pos=11) Public Domain
++ [Pectoral Necklace](https://www.metmuseum.org/art/collection/search/464070?&searchField=All&sortBy=Relevance&what=Gold&ft=Coin&offset=0&rpp=20&amp;pos=6) Public Domain
++ [Hairnet](https://www.metmuseum.org/art/collection/search/255890?&searchField=All&sortBy=Relevance&what=Gold&ft=Medallion&offset=0&rpp=20&amp;pos=8) Public Domain
+###### Arms & Armor Credits
++ [Iron War Mask](https://www.metmuseum.org/art/collection/search/35152), Public Domain
++ [Closed Burgeonet](https://www.metmuseum.org/art/collection/search/27103) Public Domain
++ [Gold Burgeonet](https://www.metmuseum.org/art/collection/search/22859) Public Domain
++ [Powder Flask](https://www.metmuseum.org/art/collection/search/22391) Public Domain
++ [Steel Shield](https://www.metmuseum.org/art/collection/search/25415) Public Domain
++ [Saber & Scabbard](https://www.metmuseum.org/art/collection/search/22871?&searchField=All&sortBy=Relevance&what=Gold&ft=Sword&offset=20&rpp=20&amp;pos=24) Public Domain
++ [Rapier](https://www.metmuseum.org/art/collection/search/24860?&searchField=All&sortBy=Relevance&what=Gold&ft=Rapier&offset=0&rpp=20&amp;pos=11)
+###### Furniture Credits
++ [Ornamental Jade Disk](https://www.harvardartmuseums.org/collections/object/204830) Public Domain (Educational Purposes)
++ [Commode](https://www.metmuseum.org/art/collection/search/206990?&searchField=All&sortBy=Relevance&what=Engraving&ft=*&offset=0&rpp=20&amp;pos=4) Public Domain
++ [Standing Clock](https://www.metmuseum.org/art/collection/search/202114) Public Domain
++ [Continued Furniture](https://www.metmuseum.org/art/collection/search#!?material=Gold&perPage=20&offset=0&q=Furniture&pageSize=0&sortBy=Relevance&sortOrder=asc&searchField=All) All public domain
+###### Other Credits
++ [Arhat Statue](https://upload.wikimedia.org/wikipedia/commons/c/c3/%E9%81%BC_%E4%B8%89%E5%BD%A9%E7%BE%85%E6%BC%A2%E5%83%8F-Arhat_%28Luohan%29_MET_DP163966.jpg) Public Domain
++ [Rosetta Stone](https://en.wikipedia.org/wiki/File:Rosetta_Stone.JPG) Credit: © Hans Hillewaert
++ [Ptah Statue](https://www.metmuseum.org/art/collection/search/587598?&searchField=All&sortBy=Relevance&what=Gold&ft=statue&offset=0&rpp=20&amp;pos=1) Public Domain
+###### Books Credits
++ [Dead Sea Scrolls](https://en.wikipedia.org/wiki/Dead_Sea_Scrolls#/media/File:Psalms_Scroll.jpg) Public Domain
++ [Leather Bible](https://www.metmuseum.org/art/collection/search/466569) Public Domain
++ [Illuminated Gospel](https://www.metmuseum.org/art/collection/search/317618) Public Domain
++ [Album of Tourneys](https://www.metmuseum.org/art/collection/search/25111) Public Domain
++ [Kitano Legends](https://www.metmuseum.org/art/collection/search/45428?&searchField=All&sortBy=Relevance&what=Gold&ft=*&offset=0&rpp=20&amp;pos=19) Public Domain
++ [Aizen Myoo](https://www.metmuseum.org/art/collection/search/44910) Public Domain
+######  Coins Credits
++ [All Coins](https://www.metmuseum.org/art/collection/search#!?material=Gold&perPage=20&offset=0&q=Coin&pageSize=0&sortBy=Relevance&sortOrder=asc&searchField=All) Fully Public Domain
 ##### Honourable Mentions
