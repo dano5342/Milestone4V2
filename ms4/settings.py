@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-import os#, env
+import os
 import dj_database_url
 
 
@@ -27,7 +27,8 @@ ON_HEROKU = 'ON_HEROKU' in os.environ
 if ON_HEROKU:
     DEBUG = False
 else:
-    DEBUG = True    
+    import env
+    DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -146,7 +147,7 @@ AWS_S3_REGION_NAME = 'eu-central-1'
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
-AWS_S3_CUTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
 STATICFILES_LOCATION = 'static'
@@ -164,7 +165,7 @@ STATICFILES_DIRS = (
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = 'https://%s/%s/' %(AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 #Stripe info Importing here:
 STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE')
