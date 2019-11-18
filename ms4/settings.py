@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-import os
+import os#, env
 import dj_database_url
 
 
@@ -23,7 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY') or 'whatever'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ON_HEROKU = 'ON_HEROKU' in os.environ
+if ON_HEROKU:
+    DEBUG = False
+else:
+    DEBUG = True    
 
 ALLOWED_HOSTS = ['*']
 
