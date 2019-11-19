@@ -24,9 +24,7 @@ def register(request):
 @login_required
 def profile(request):
     """
-    Returns the Users profile page, In the template only the logged
-    in user can view the forms and personal data such as address etc.
-    Other users may view the Username, Profile picture and about section.
+    Returns the Users profile page
     """
     if request.method == 'POST':
         update_form = UpdateForm(request.POST, instance=request.user)
@@ -42,7 +40,7 @@ def profile(request):
             return redirect('profile')
     else:
         update_form = UpdateForm(instance=request.user)
-        profile_form = ProfileUpdate(instance=request.user.profile)
+        profile_form = ProfileUpdate(instance=request.user)
         address_form = AddressUpdate()
 
     form_contexts = {
