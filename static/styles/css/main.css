@@ -20,6 +20,26 @@
 .cart-link {
   color: #404040 !important; }
 
+.fa-stack[data-count]:before {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  content: attr(data-count);
+  font-size: 40%;
+  padding: .6em;
+  border-radius: 999px;
+  line-height: .75em;
+  color: white;
+  color: #404040;
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold;
+  background: red;
+  border-style: solid; }
+
+.fa-circle {
+  color: #DF0000; }
+
 /* Main */
 body,
 html {

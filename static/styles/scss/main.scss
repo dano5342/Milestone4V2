@@ -7,14 +7,15 @@ $dark: #404040;
 $brown: #BF9969;
 $mahog: #735A3D;
 $gold: #BF9039;
+
 /* Mixins */
-@mixin title{
+@mixin title {
   font-family: 'Norican', sans-serif;
   font-weight: 500;
 
 }
 
-@mixin text{
+@mixin text {
   font-family: 'Arima Maduri', sans-serif;
   font-weight: 500;
 
@@ -25,10 +26,12 @@ $gold: #BF9039;
   overflow: hidden;
   background-color: $white;
 }
+
 #searchbar {
   justify-content: center;
   align-content: center;
 }
+
 .sticky {
   position: fixed;
   top: 0;
@@ -36,43 +39,72 @@ $gold: #BF9039;
   z-index: 999;
   opacity: 0.8;
 }
-.cart-link{
-  color: $dark!important;
+
+.cart-link {
+  color: $dark !important;
 }
+
+.fa-stack[data-count]:before {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  content: attr(data-count);
+  font-size: 40%;
+  padding: .6em;
+  border-radius: 999px;
+  line-height: .75em;
+  color: white;
+  color: $dark;
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold;
+  background: red;
+  border-style: solid;
+}
+
+.fa-circle {
+  color: #DF0000;
+}
+
 
 /* Main */
 body,
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    @include text;
-    background-color: $white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  @include text;
+  background-color: $white;
 }
 
 .push {
-  padding-top: 120px!important;
+  padding-top: 120px !important;
 }
-.landing-title{
+
+.landing-title {
   color: black;
   font-size: 52px;
   text-shadow: 1px 2px white;
 
 }
-.landing-text{
+
+.landing-text {
   color: black;
   font-size: 19px
 }
-.title{
+
+.title {
   @include title;
 }
-.img-container{
-  min-width: 100%!important;
-  min-height: 100%!important;
+
+.img-container {
+  min-width: 100% !important;
+  min-height: 100% !important;
   position: relative;
   text-align: center;
-  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(100%); 
+  -webkit-filter: grayscale(100%);
+  /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%);
 }
 
 .centered {
@@ -81,6 +113,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .bottom-right {
   position: absolute;
   bottom: 8px;
@@ -94,20 +127,23 @@ html {
 
 }
 
-.categories{
+.categories {
   padding-top: 15px;
 }
 
-.info-image{
-  width: 350px!important;
-  height: 350px!important;
+.info-image {
+  width: 350px !important;
+  height: 350px !important;
   align-items: center;
   border-radius: 20px;
 }
-.cat-row{
+
+.cat-row {
   padding: 14px;
 }
+
 .link-unstyled {
+
   &,
   &:visited,
   &:hover,
@@ -132,35 +168,38 @@ html {
   }
 }
 
-.cat-container{
-  padding:4px;
+.cat-container {
+  padding: 4px;
   transition: filter .5s ease-in-out;
-  -webkit-filter: grayscale(0%); 
-  filter: grayscale(0%); 
-  &:hover{
-    -webkit-filter: grayscale(100%); 
-  filter: grayscale(100%); 
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+
+  &:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
   }
 }
+
 /* Content */
-.titl-tran{
-   
-}
+.titl-tran {}
 
 /* Product Styles */
 .info-container {
   margin: 4px 10px
 }
+
 .title-card {
   padding-top: 50px;
   padding-bottom: 25px
 }
-.product-image{
+
+.product-image {
   width: 240px;
   height: 240px;
   border-radius: 15px;
   padding: 2px 4px;
 }
+
 .description-col {
   padding: 4px 4px;
   margin: 4px 10px;
@@ -170,41 +209,38 @@ html {
 .desc-card {
   padding: 10px;
 }
+
 .panel-default {
   border-color: transparent;
   padding: 10px 7px;
 }
 
-.panel-body{
+.panel-body {
   height: 100%;
   border: 1px solid #ddd;
 }
 
-.card-img-top{
+.card-img-top {
   max-height: 250px;
   min-height: 250px;
 }
 
 
 /* Profile Styles */
-.account-img{
-    height: 125px;
+.account-img {
+  height: 125px;
   width: 125px;
   margin-right: 20px;
   margin-bottom: 16px;
 }
 
 /* Cart Styling */
-.cart-row{
+.cart-row {}
 
-}
-
-.amend-prod{
-  
-}
+.amend-prod {}
 
 
-.cart-image{
+.cart-image {
   width: 300px;
   height: 300px;
 }
@@ -212,12 +248,12 @@ html {
 /* Checkout Styling */
 /* Footer */
 #sticky-footer {
-    flex-shrink: none;
-    background-color: $dark
-  }
-.unordered {
-  list-style-type:none;
+  flex-shrink: none;
+  background-color: $dark
 }
+
+.unordered {
+  list-style-type: none;
+}
+
 /* Media Queries */
-
-
