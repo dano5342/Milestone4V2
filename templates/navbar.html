@@ -44,8 +44,13 @@
          <div>
              <ul class="navbar-nav ml-auto">
                  <li class="nav-item">
-                     <a href="{% url 'view_cart' %}" class="nav-link cart-link"> <i class="fas fa-shopping-cart"></i>
-                         Cart</a>
+                     <a href="{% url 'view_cart' %}" class="nav-link cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            {% if product_count %}
+                                {{ product_count }}
+                            {% endif %}
+                            Cart
+                     </a>
                  </li>
          </div>
      </nav>
