@@ -20,12 +20,12 @@
 .cart-link {
   color: #404040 !important; }
 
-.fa-stack[data-count]:before {
+.fa-stack[data-count]::before {
   position: absolute;
   right: 0%;
   top: 0%;
-  content: attr(data-count);
-  font-size: 40%;
+  content: attr(data-count integer);
+  font-size: 30%;
   padding: .6em;
   border-radius: 999px;
   line-height: .75em;

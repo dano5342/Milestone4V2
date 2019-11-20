@@ -6,7 +6,6 @@
              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
          </button>
-
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav mr-auto">
                  <li class="nav-item">
@@ -40,15 +39,13 @@
                  </li>
                  {% endif %}
              </ul>
-         </div>
-         <div>
              <ul class="navbar-nav ml-auto">
                  <a href="{% url 'view_cart' %}" class="nav-link cart-link">
                      <li class="nav-item">
-                         <span class="fa-stack fa-2x badge"
+                         <span class="fa-stack fa-2x has-badge"
                              data-count="{% if product_count %}{{ product_count }}{% endif %}">
-                             <i class="fa fa-circle fa-stack-2x"></i>
-                             <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                             <i class="fas fa-circle fa-stack-2x"></i>
+                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                          </span>
                      </li>
                  </a>
