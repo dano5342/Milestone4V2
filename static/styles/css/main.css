@@ -67,12 +67,10 @@ html {
   font-weight: 500; }
 
 .img-container {
-  min-width: 100% !important;
-  min-height: 100% !important;
+  min-width: 100%;
   position: relative;
   text-align: center;
   -webkit-filter: grayscale(100%);
-  /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: grayscale(100%); }
 
 .centered {
@@ -95,8 +93,8 @@ html {
   padding-top: 15px; }
 
 .info-image {
-  width: 350px !important;
-  height: 350px !important;
+  width: 350px;
+  height: 350px;
   align-items: center;
   border-radius: 20px; }
 
@@ -154,15 +152,28 @@ html {
 
 .panel-default {
   border-color: transparent;
-  padding: 10px 7px; }
+  padding: 10px 7px;
+  border: 4px; }
+
+.card:hover {
+  -webkit-box-shadow: 9px 9px 7px rgba(0, 0, 0, 0.16), 0 4px 8px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 9px 7px rgba(0, 0, 0, 0.16), 0 4px 8px rgba(0, 0, 0, 0.23); }
 
 .panel-body {
   height: 100%;
-  border: 1px solid #ddd; }
+  background-color: white; }
+  .panel-body:hover {
+    transition: 0.4s all ease-in-out;
+    background-color: #404040;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+    border: #404040;
+    color: #F2F2F2; }
 
 .card-img-top {
   max-height: 250px;
-  min-height: 250px; }
+  min-height: 250px;
+  border-radius: inherit; }
 
 #quantity-bar {
   width: 40%;

@@ -29,9 +29,8 @@
                         <a href="{% url 'more info' product.id%}" class="link-unstyled">
                             <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.title}}"
                                 class="card-img-top img-fluid">
-
                             <div class="card-body">
-                                <h3>{{ product.title }}</h3>
+                                <h5>{{ product.title }}</h5>
                                 <p class="product-description">{{ product.summary }}</p>
                                 <p> <i class="fas fa-euro-sign"></i> {{ product.price }}</p>
                             </div>
