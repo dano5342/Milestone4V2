@@ -132,7 +132,8 @@ html {
 /* Content */
 /* Product Styles */
 .info-container {
-  margin: 4px 10px; }
+  margin: 4px 10px;
+  padding-bottom: 20px; }
 
 .title-card {
   padding-top: 50px;
@@ -162,6 +163,10 @@ html {
 .card-img-top {
   max-height: 250px;
   min-height: 250px; }
+
+#quantity-bar {
+  width: 40%;
+  max-width: 40%; }
 
 /* Profile Styles */
 .account-img {
