@@ -36,7 +36,7 @@ $gold: #BF9039;
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100% !important;
   z-index: 999;
   opacity: 1;
 }
@@ -101,7 +101,7 @@ html {
   min-width: 100%;
   position: relative;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 120px;
 }
 
 .centered {
@@ -169,10 +169,12 @@ html {
 }
 
 .cat-container {
-  padding: 4px;
-  transition: filter .5s ease-in-out;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+    /* padding: 4px; */
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    padding-top: 12px;
+    padding-bottom: 25px;
 
   &:hover {
     -webkit-filter: grayscale(100%);
@@ -275,3 +277,60 @@ html {
 }
 
 /* Media Queries */
+
+/* Phones here */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+  /* Landing Styles */
+  .img-container{
+    padding-top: 80px;
+  }
+  
+  .landing-image {
+    width: 100%;
+    height: inherit;
+    padding-left: 13px
+  }
+  
+  .bottom-right {
+    position: relative;
+    padding-top: 12px;
+    padding-left: 35px;
+  }
+
+  .about {
+    padding-top: 25px;
+    padding-left: 23px;
+  }
+  .categories{
+    padding-bottom: 24px;
+  }
+  .cat-container {
+    width: 100%
+  }
+}
+
+/* All Products  */
+
+
+/* Tablets */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .landing-image {
+    height: 40rem;
+    border-radius: 27px;
+    margin-left: 4px;
+    margin-right: -12px;
+}
+  
+.bottom-right {
+  position: relative;
+  padding-top: 12px;
+  padding-left: 35px;
+}
+  .info-image {
+    width: 275px;
+    height: 250px;
+    align-items: center;
+    border-radius: 20px;
+}
+}
