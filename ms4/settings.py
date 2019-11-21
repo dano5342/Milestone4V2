@@ -27,7 +27,7 @@ ON_HEROKU = 'ON_HEROKU' in os.environ
 if ON_HEROKU:
     DEBUG = False
 else:
-    #import env
+    import env
     DEBUG = True
 
 ALLOWED_HOSTS = ['*']

@@ -25,6 +25,7 @@ $gold: #BF9039;
 #navbar {
   overflow: hidden;
   background-color: $white;
+  box-shadow: 0px 2px $dark;
 }
 
 #searchbar {
@@ -37,7 +38,7 @@ $gold: #BF9039;
   top: 0;
   width: 100%;
   z-index: 999;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .cart-link {
@@ -97,11 +98,10 @@ html {
 }
 
 .img-container {
-  min-width: 100% ;
+  min-width: 100%;
   position: relative;
   text-align: center;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  padding-top: 25px;
 }
 
 .centered {
@@ -119,11 +119,14 @@ html {
 }
 
 .landing-image {
-  max-width: 100%;
-  max-height: 80%;
-
+  height: 40rem;
+  border-radius: 27px;
 }
 
+.about {
+  padding-top: 25px;
+
+}
 .categories {
   padding-top: 15px;
 }

@@ -4,7 +4,8 @@
 /* Navbar */
 #navbar {
   overflow: hidden;
-  background-color: #F2F2F2; }
+  background-color: #F2F2F2;
+  box-shadow: 0px 2px #404040; }
 
 #searchbar {
   justify-content: center;
@@ -15,7 +16,7 @@
   top: 0;
   width: 100%;
   z-index: 999;
-  opacity: 0.8; }
+  opacity: 1; }
 
 .cart-link {
   color: #404040 !important; }
@@ -70,8 +71,7 @@ html {
   min-width: 100%;
   position: relative;
   text-align: center;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
+  padding-top: 25px; }
 
 .centered {
   position: absolute;
@@ -86,8 +86,11 @@ html {
   color: black; }
 
 .landing-image {
-  max-width: 100%;
-  max-height: 80%; }
+  height: 40rem;
+  border-radius: 27px; }
+
+.about {
+  padding-top: 25px; }
 
 .categories {
   padding-top: 15px; }
