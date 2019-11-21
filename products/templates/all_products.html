@@ -1,26 +1,40 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
+<section class="container prod-section">
     <div class="row">
-        <ul class="navbar-nav ml-auto">
+        <ul class="ml-auto">
+            <!-- Filter Products by category -->
             <form action="{% url 'products' %}" method="GET">
+                {% csrf_token %}
                 {% for category in category %}
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="category" value="{{ category.category }}">
-                    <label for="{{ category.category }}">{{category.category}}</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="category" value="{{ category.category }}"
+                            id="{{ category.category }}">
+                        <label class="fil-label form-check-label"
+                            for="{{ category.category }}">{{category.category}}</label>
+                    </div>
                 </div>
                 {% endfor %}
                 {% if category %}
-                <button action="submit" class="btn btn-primary"> Apply Filter</button>
+                <button action="submit" class="btn btn-primary"><i class="fas fa-filter"></i> Filter</button>
                 {% endif %}
             </form>
         </ul>
     </div>
-    <div class="row row-flex">
-    <div class="col">
-        <h2>Your Browsing {% if category %} {{category.category}} {% else %} All Products {% endif %}</h2>
+    <!-- Mobile Search bar-->
+    <div class="mbv-search d-md-none">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="GET">
+            <input class="form-control mbv-bar" type="search" placeholder="Search" aria-label="Search" name="q">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"
+                    aria-hidden="true"></i></button>
+        </form>
     </div>
-    <div class="col"></div>
+    <div class="row row-flex">
+        <div class="col">
+            <h2>Your Browsing {% if category %} {{category.category}} {% else %} All Products {% endif %}</h2>
+        </div>
+        <div class="col"></div>
         <div class="card-group">
             {% for product in products %}
             <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 panel panel-default">
@@ -71,5 +85,5 @@
             </div>
         </nav>
     </div>
-</div>
+</section>
 {% endblock %}
