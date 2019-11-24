@@ -84,7 +84,8 @@ html {
 
 .title {
   font-family: 'Norican', sans-serif;
-  font-weight: 500; }
+  font-weight: 500;
+  text-transform: capitalize; }
 
 .img-container {
   min-width: 100%;
@@ -157,7 +158,8 @@ html {
 
 .info-container {
   margin: 4px 10px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  padding-top: 12px; }
 
 .title-card {
   padding-top: 50px;
@@ -208,6 +210,16 @@ html {
 #quantity-bar {
   width: 40%;
   max-width: 40%; }
+
+.detail-image {
+  width: 100%;
+  border-radius: 12px; }
+
+#basket-section {
+  padding-top: 350px; }
+
+.desc-area {
+  margin-top: 25px; }
 
 /* Pagination Styling */
 .page-link {

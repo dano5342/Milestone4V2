@@ -15,6 +15,7 @@ $invertWhite: #0d0d0d;
 @mixin title {
   font-family: 'Norican', sans-serif;
   font-weight: 500;
+  text-transform: capitalize;
 
 }
 
@@ -207,16 +208,14 @@ html {
     filter: grayscale(100%);
   }
 }
-
-
 /* Product Styles */
-
 .form-group {
   display: inline;
 }
 .info-container {
   margin: 4px 10px;
   padding-bottom: 20px;
+  padding-top: 12px;
 }
 
 .title-card {
@@ -279,6 +278,18 @@ html {
   max-width: 40%;
 }
 
+.detail-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+#basket-section {
+  padding-top: 350px;
+}
+
+.desc-area {
+  margin-top: 25px;
+}
 
 /* Pagination Styling */
 .page-link  {
