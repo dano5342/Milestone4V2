@@ -3,10 +3,13 @@
 
 $white: #F2F2F2;
 $cream: #F2D0A7;
+$invertCream: #0d2f58;
 $dark: #404040;
 $brown: #BF9969;
 $mahog: #735A3D;
 $gold: #BF9039;
+$invertDark: #bfbfbf;
+$invertWhite: #0d0d0d;
 
 /* Mixins */
 @mixin title {
@@ -68,11 +71,34 @@ $gold: #BF9039;
 }
 
 
+.btn-success {
+  background-color: $dark;
+  border-color: $dark;
+  color: $white;
+  &:hover, &:active {
+    color: $invertWhite;
+    background-color: $invertDark;
+    border-color: $invertDark;
+  }
+}
+
+.btn-primary {
+  background-color: $cream;
+  border-color: $cream;
+  color: $dark;
+  &:hover, &:active{
+    background-color: $invertCream;
+    border-color: $invertCream;
+    color: $cream;
+  }
+}
+
 /* Main */
 body,
 html {
   margin: 0;
   padding: 0;
+  padding-top: 48px;
   height: 100%;
   @include text;
   background-color: $white;
@@ -199,7 +225,8 @@ html {
 }
 
 .prod-section {
-  padding-top: 125px;
+  padding: 16px;
+  margin-top: 12px;
 }
 
 .product-image {
@@ -252,6 +279,19 @@ html {
   max-width: 40%;
 }
 
+
+/* Pagination Styling */
+.page-link  {
+  background-color: $dark;
+  border-color: $dark;
+  color: $white;
+  &:hover, &:active {
+    color: $invertWhite;
+    background-color: $invertDark;
+    border-color: $invertDark;
+  }
+
+}
 /* Profile Styles */
 .account-img {
   height: 125px;
@@ -295,7 +335,7 @@ html {
   .landing-image {
     width: 100%;
     height: inherit;
-    padding-left: 13px
+    border-radius: 0px;
   }
   
   .bottom-right {

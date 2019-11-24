@@ -6,16 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Artefacts Curiosities Collectibles Antique Shop">
     <title>{% block title %} {% endblock %}</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'styles/css/main.css' %}">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/306996b22a.js" crossorigin="anonymous"></script>
-
     {% block head_js %}
     {% endblock head_js%}
 </head>
@@ -24,11 +22,13 @@
 
 <body id="body">
     {% if messages %}
-    <div class="alert alert-success">
-        <div class="messages">
-            {% for message in messages %}
-            {{ message }}
-            {% endfor %}
+    <div id="messageSection">
+        <div class="alert alert-success">
+            <div class="messages">
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+            </div>
         </div>
     </div>
     {% endif %}

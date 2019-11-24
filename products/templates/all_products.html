@@ -26,7 +26,7 @@
     <div class="mbv-search d-md-none">
         <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="GET">
             <input class="form-control mbv-bar" type="search" placeholder="Search" aria-label="Search" name="q">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"
+            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fa fa-search"
                     aria-hidden="true"></i></button>
         </form>
     </div>
@@ -75,7 +75,7 @@
                     {% endif %}
                     {% endfor %}
                     {% if products.has_next %}
-                    <li class="page-item page-link"><a href="?page={{ products.next_page_number }}"><i
+                    <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}"><i
                                 class="fas fa-arrow-right"></i></a></li>
                     {% else %}
                     <li class="disabled page-item page-link"><i class="fas fa-arrow-right"></i></li>
