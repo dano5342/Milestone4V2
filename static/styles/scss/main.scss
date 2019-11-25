@@ -128,7 +128,7 @@ html {
   min-width: 100%;
   position: relative;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .centered {
@@ -139,10 +139,10 @@ html {
 }
 
 .bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-  color: black
+  position: relative;
+  margin-top: 8px;
+  color: black;
+  left: 360px;
 }
 
 .landing-image {
@@ -211,6 +211,9 @@ html {
 /* Product Styles */
 .form-group {
   display: inline;
+}
+.form-margin {
+  margin-right: 4px;
 }
 .info-container {
   margin: 4px 10px;
@@ -281,12 +284,16 @@ html {
 .detail-image {
   width: 100%;
   border-radius: 12px;
+  height: 65vh;
 }
 
 #basket-section {
-  padding-top: 350px;
+  padding-top: 25vh;
 }
 
+.price {
+  font-size: 26px;
+}
 .desc-area {
   margin-top: 25px;
 }
@@ -323,6 +330,8 @@ html {
 }
 
 /* Checkout Styling */
+
+
 /* Footer */
 #sticky-footer {
   flex-shrink: none;
@@ -338,6 +347,9 @@ html {
 /* Phones here */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
+  body {
+    padding-top: 12px;;
+  }
   /* Landing Styles */
   .img-container{
     padding-top: 80px;
@@ -350,7 +362,7 @@ html {
   }
   
   .bottom-right {
-    position: relative;
+    position: static;
     padding-top: 12px;
     padding-left: 35px;
   }
@@ -366,15 +378,22 @@ html {
     width: 100%
   }
   /* All Products  */
-  .prod-section {
-    padding-top: 75px;
+  .panel-default {
+    padding: 8px;
+    margin: 4px;
   }
-
   .mbv-bar {
     width: 70%;
     margin-right: 12px;
   }
+  /* Detailed View */
+  .detail-image{
+    height: 35vh;
+  }
 
+  #basket-section {
+    padding-top: 15px;
+  };
 }
 
 
@@ -388,17 +407,34 @@ html {
     border-radius: 27px;
     margin-left: 4px;
     margin-right: -12px;
-}
-  
-.bottom-right {
-  position: relative;
+  }
+
+  .bottom-right {
+  position: static;
   padding-top: 12px;
   padding-left: 35px;
-}
+  }
+
+  #basket-section {
+    padding-top: 120px;
+  }
   .info-image {
     width: 275px;
     height: 250px;
     align-items: center;
     border-radius: 20px;
+  }
+  .about {
+    margin: 12px;
+  }
+  
 }
-}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .detail-image {
+    height: 35vh;
+  }
+  #basket-section {
+    padding-top: 80px;
+  }
+} 

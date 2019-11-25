@@ -11,10 +11,10 @@
         </div>
         <div class="col-12 col-md-6 col-lg-3" id="basket-section">
             <p class="text">
-                {{ product.summary }}
                 <em>
-                    <p><i class="fas fa-euro-sign"></i> {{ product.price }}</p>
+                    <p class="price"><i class="fas fa-euro-sign"></i> {{ product.price }}</p>
                 </em>
+                {{ product.summary }}
             </p>
             <form method="post" action="{% url 'add_to_cart' product.id%} " class="add-prod">
                 {% csrf_token %}
@@ -41,12 +41,13 @@
             <div class="card h-100">
                 <div class="panel-body">
                     <a href="{% url 'more info' product.id%}" class="link-unstyled">
-                        <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.title}}" class="card-img-top"> </a>
-                    <div class="card-body">
-                        <h5>{{ product.title }}</h5>
-                        <p class="product-description">{{ product.summary }}</p>
-                        <p> <i class="fas fa-euro-sign"></i> {{ product.price }}</p>
-                    </div>
+                        <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.title}}" class="card-img-top">
+                        <div class="card-body">
+                            <h5>{{ product.title }}</h5>
+                            <p class="product-description">{{ product.summary }}</p>
+                            <p> <i class="fas fa-euro-sign"></i> {{ product.price }}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

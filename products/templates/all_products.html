@@ -2,7 +2,7 @@
 {% block content %}
 <section class="container prod-section">
     <div class="row">
-        <ul class="ml-auto">
+        <ul class="ml-auto form-margin">
             <!-- Filter Products by category -->
             <form action="{% url 'products' %}" method="GET">
                 {% csrf_token %}
