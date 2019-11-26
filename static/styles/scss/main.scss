@@ -222,7 +222,7 @@ html {
 }
 
 .form-margin {
-  margin-right: 4px;
+  margin: 4px 2px;
 }
 
 .info-container {
@@ -306,6 +306,7 @@ html {
 
 .price {
   font-size: 26px;
+  padding-left: 12px;
 }
 
 .desc-area {
@@ -336,6 +337,9 @@ html {
 }
 
 /* Cart Styling */
+section {
+  min-height: 75vh;
+}
 .basket {
   padding-top: 12px;
 }
@@ -373,7 +377,15 @@ html {
   margin: 4px;
 }
 
-/* Checkout Styling */
+
+.ch-pr-row {
+  margin: 4px;
+  padding: 5px;
+}
+
+.remove-but {
+  margin-left: 120px;
+}
 
 
 /* Footer */
@@ -439,7 +451,9 @@ html {
     width: 70%;
     margin-right: 12px;
   }
-
+  .margin {
+    margin: 12px;
+  }
   /* Detailed View */
   .detail-image {
     height: 35vh;
@@ -452,6 +466,13 @@ html {
   .total-container {
     width: 100%;
     padding: 12px;
+  }
+  .cart-container{
+    margin-top: 8px;
+  }
+  .remove-but {
+    margin-left: 301px;
+    margin-bottom: 7px;
   }
 }
 
@@ -493,6 +514,10 @@ html {
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  body {
+    padding-top: 12px;
+  }
+  
   .detail-image {
     height: 35vh;
   }
@@ -509,7 +534,9 @@ html {
     /* margin: 45px; */
     width: 100%;
   }
-
+  .remove-but {
+    margin-left: 145px;
+}
   .total-container {
     width: 100%;
     padding: 12px;

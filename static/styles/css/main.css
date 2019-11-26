@@ -159,7 +159,7 @@ html {
   display: inline; }
 
 .form-margin {
-  margin-right: 4px; }
+  margin: 4px 2px; }
 
 .info-container {
   margin: 4px 10px;
@@ -225,7 +225,8 @@ html {
   padding-top: 25vh; }
 
 .price {
-  font-size: 26px; }
+  font-size: 26px;
+  padding-left: 12px; }
 
 .desc-area {
   margin-top: 25px; }
@@ -248,6 +249,9 @@ html {
   margin-bottom: 16px; }
 
 /* Cart Styling */
+section {
+  min-height: 75vh; }
+
 .basket {
   padding-top: 12px; }
 
@@ -278,7 +282,13 @@ html {
   padding: 12px;
   margin: 4px; }
 
-/* Checkout Styling */
+.ch-pr-row {
+  margin: 4px;
+  padding: 5px; }
+
+.remove-but {
+  margin-left: 120px; }
+
 /* Footer */
 #sticky-footer {
   flex-shrink: none;
@@ -329,6 +339,9 @@ html {
     width: 70%;
     margin-right: 12px; }
 
+  .margin {
+    margin: 12px; }
+
   /* Detailed View */
   .detail-image {
     height: 35vh; }
@@ -338,7 +351,14 @@ html {
 
   .total-container {
     width: 100%;
-    padding: 12px; } }
+    padding: 12px; }
+
+  .cart-container {
+    margin-top: 8px; }
+
+  .remove-but {
+    margin-left: 301px;
+    margin-bottom: 7px; } }
 /* Tablets */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .landing-image {
@@ -364,6 +384,9 @@ html {
   .about {
     margin: 12px; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  body {
+    padding-top: 12px; }
+
   .detail-image {
     height: 35vh; }
 
@@ -377,6 +400,9 @@ html {
     /* padding: 6px; */
     /* margin: 45px; */
     width: 100%; }
+
+  .remove-but {
+    margin-left: 145px; }
 
   .total-container {
     width: 100%;

@@ -19,7 +19,15 @@
             <form method="post" action="{% url 'add_to_cart' product.id%} " class="add-prod">
                 {% csrf_token %}
                 <div class="input-group" class="quantity">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                    <select name="quantity" id="" class="form-control">
+                        {% for i in i_range %}
+                        {% if i == item.quantity %}
+                        <option value="{{item.quantity}}" selected>{{item.quantity}}</option>
+                        {% else %}
+                        <option value="{{i}}">{{i}}</option>
+                        {% endif %}
+                        {% endfor%}
+                    </select>
                     <span class="input-group-btn">
                         <button class="btn btn-success" type="submit">Add</button>
                     </span>
