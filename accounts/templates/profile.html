@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container">
+<section class="container">
   <div class="content-section">
     <div class="media">
       <div class="row">
@@ -26,12 +26,11 @@
         <legend class="border-bottom mb-4">Change Information?</legend>
         {{ update_form | crispy }}
         {{ profile_form | crispy }}
-        {{ address_form | crispy }}
       </fieldset>
       <div class="form-group">
         <button class="btn btn-outline-info" type="submit">Update.</button>
       </div>
     </form>
   </div>
-</div>
+</section>
 {% endblock content %}
