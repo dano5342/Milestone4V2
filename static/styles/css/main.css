@@ -250,6 +250,7 @@ html {
 
 /* Cart Styling */
 section {
+  padding-top: 12px;
   min-height: 75vh; }
 
 .basket {
@@ -299,6 +300,10 @@ section {
 .unordered {
   list-style-type: none; }
 
+.text-muted .redir {
+  color: #6c757d !important;
+  margin-left: 417px; }
+
 /* Media Queries */
 /* Phones here */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -342,6 +347,10 @@ section {
   .margin {
     margin: 12px; }
 
+  .text-muted .redir {
+    color: #6c757d !important;
+    margin-left: 27px; }
+
   /* Detailed View */
   .detail-image {
     height: 35vh; }
@@ -382,7 +391,11 @@ section {
     border-radius: 20px; }
 
   .about {
-    margin: 12px; } }
+    margin: 12px; }
+
+  .text-muted .redir {
+    color: #6c757d !important;
+    margin-left: 330px; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   body {
     padding-top: 12px; }

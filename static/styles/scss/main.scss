@@ -338,6 +338,7 @@ html {
 
 /* Cart Styling */
 section {
+  padding-top: 12px;
   min-height: 75vh;
 }
 .basket {
@@ -400,6 +401,11 @@ section {
   list-style-type: none;
 }
 
+.text-muted .redir {
+  color: #6c757d!important;
+  margin-left: 417px;
+}
+
 /* Media Queries */
 
 /* Phones here */
@@ -453,6 +459,10 @@ section {
   }
   .margin {
     margin: 12px;
+  }
+  .text-muted .redir{
+    color: #6c757d !important;
+    margin-left: 27px;
   }
   /* Detailed View */
   .detail-image {
@@ -510,6 +520,10 @@ section {
     margin: 12px;
   }
 
+  .text-muted .redir {
+    color: #6c757d !important;
+    margin-left: 330px;
+  }
 
 }
 
