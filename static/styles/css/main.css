@@ -304,6 +304,18 @@ section {
   color: #6c757d !important;
   margin-left: 417px; }
 
+#cart {
+  background-color: #bfbfbf;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  color: #404040;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin-left: -18px; }
+
 /* Media Queries */
 /* Phones here */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

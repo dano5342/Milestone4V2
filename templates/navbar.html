@@ -42,11 +42,12 @@
              <ul class="navbar-nav ml-auto">
                  <a href="{% url 'view_cart' %}" class="nav-link cart-link">
                      <li class="nav-item">
-                         <span class="fa-stack fa-2x has-badge"
-                             data-count="{% if product_count %}{{ product_count }}{% endif %}">
-                             <i class="fas fa-circle fa-stack-2x"></i>
-                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                         </span>
+                         <i class="fas fa-shopping-cart fa-2x"></i>
+                         {% if product_count %}
+                         <div id="cart">
+                             {{ product_count }}
+                         </div>
+                         {% endif %}
                      </li>
                  </a>
              </ul>

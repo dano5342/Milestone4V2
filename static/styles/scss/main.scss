@@ -406,6 +406,20 @@ section {
   margin-left: 417px;
 }
 
+#cart {
+  background-color: $invertDark;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  color: $dark;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin-left: -18px;
+}
+
+
 /* Media Queries */
 
 /* Phones here */
