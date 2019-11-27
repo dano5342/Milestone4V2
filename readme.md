@@ -29,10 +29,17 @@ This project will make use of a collection of tech's that I've used so far throu
 + PostgreSQL / SQLite - Will be used for my database in the back end. Postgres will be used for the heroku hosting and SQLite will be used for testing the site before deployment.
 
 #### Testing
-+ To be written
-+ PDB - using it to debug stripe payments in the console.
+All unit testing was completed using the built in `python manage.py test` command working through each app for the django project, you can find
+the tests written for each app under the 'appname'/'testing' folders, each test suite is written for the views, forms and models of each section. 
+Coverage was also used to help attain near 100% completion. If there was anything particularly 
+challenging on something that required a lot of testing it will be written up below however if nothing out of the ordinary
+comes up then the unit tests passed correctly and didnt require any further testing for the purposes of the project.
+###### Checkout
+During my struggles to write the stripe code into the project I utilised the builtin Python DeBugger (PDB) tool to help print to the console what was being held in the app at the time, this helped to differentiate between bools and functions whilst getting lost in the code.
+
+##### Continuous Integration
 + Travis write up
-+ Unit Testing
+
 + User Stories Testing Manually testing.
 + Am i responsive?
 

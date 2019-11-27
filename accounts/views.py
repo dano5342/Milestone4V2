@@ -10,6 +10,10 @@ def register(request):
     """ 
     Registers a new user on the backend
     """
+
+    if request.user.is_authenticated:
+        return redirect('home')
+
     if request.method == "POST":
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
