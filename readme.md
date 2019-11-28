@@ -1,17 +1,17 @@
 # Milestone Project 4 - Auction E-Commerce App
 wireframes [here](https://drive.google.com/open?id=1eMpOrnaVDADfW-CZU_iwkKvDAcTaU4fH) and please download free [Adobe XD](https://www.adobe.com/lu_de/products/xd.html) to view these frames properly!
 [![Build Status](https://travis-ci.org/dano5342/Milestone4V2.svg?branch=master)](https://travis-ci.org/dano5342/Milestone4V2)
-#### Overview
+## Overview
 This website is inspired by Ebay as an e-commerce website - with a twist. This project is going to be built purely upon historical artifacts of myth and legend, with maybe a few actual items thrown in as well. This website will be intended for collectors and sellers as will be storied upon below in my UX section. Think of these items as an offshoot of the old Catholic way of buying into heaven by way of [Indulgences](https://en.wikipedia.org/wiki/Indulgence). 
 
-#### UX
+## UX
 The website will be focussed on a few different users which shall be expanded upon below.
 1. `New User` On happenstance has found the website through a search engine via optimised keywords - This new user wants to know what the site is for, what they can achieve via registering to the site and what is on offer. Nothing too obtrusive and they can browse at their leisure and be walked through the auctions through categories and tags.
 2. `Previous User` Has been on the site for a while now, has an account and han't yet made any sales or purchases, and via luck has come accross a Splinter from the Lance of St. George - Thus he would like to make some money via an auction. Understanding this he places the item for sale with a time limit of 2 weeks and also a `Buy it!` limit of £1500. Starting the auction at £499 to entice people to go above and beyond the `Buy it!` price.
 3. `Shop User (seller)` This is an experienced user and they may be a business of their own with employees for finding these treasures and the person who runs the online shop. They have recently found a trove of treasures from the Spanish Treasure Fleet. As such they have many items that are of similar look and size and dont want to auction them however sell them off individually with only `Buy it!` options, some of their customers would like to access these and store them in a cart for reviewing until they are ready to purchase. This allows them to keep a tight inventory on what they have left over etc.
 4. `Collector` This user is the main Target audience for the website, this user wants to be able to review all things within certain categories and then make purchases from within them. Storing things as they go along in their cart until ready for order. They also arent sure how trustworthy some sellers are as they had a bad experience with one previously! So they would like the ability to view reviews of the person/shop they may be buying from and also leave a review for an item that they purchased from this seller.
 
-#### Features
+## Features
 + Registration - `New User` Wants to be able to register to the site to be able to make purchases and read reviews on items
 + Log In - `Previous User` Wants to be able to log in as they didnt complete their sale when going through last time, the site has saved some of the details that they added before but they'd like to complete this to make some money.
 + Create Auction - `Previous User` Will also need to use this function to complete their sales. They can achieve this buy going through to their account page and finding the create auction area button.
@@ -19,7 +19,7 @@ The website will be focussed on a few different users which shall be expanded up
 + Remove Auction - `Shop User` Has had a private offer on one of their items with limited availability and would like to remove the item from sale to the public. 
 + Watch this Product - `Collector` has had their eye on a portrait of Medusa before she became a gorgon and is quite certain he wants to purchase it, however he doesn't want to go too high too quickly and is watching to see how the auction will unfold.
 
-#### Technologies
+## Technologies
 This project will make use of a collection of tech's that I've used so far through my course.
 + HTML - For writing the templates in which each view will be written HTML the language of the web will be utilised.
 + SCSS / CSS - Compiling my stles from Sassy CSS into CSS will help to minimise the amount of coding necessary in the styling of the website.
@@ -28,16 +28,71 @@ This project will make use of a collection of tech's that I've used so far throu
 + Python Django - Python highend language will be used for writing tests, views, urls and linking the backend up to the front end. This will be achieved with Django templating framework.
 + PostgreSQL / SQLite - Will be used for my database in the back end. Postgres will be used for the heroku hosting and SQLite will be used for testing the site before deployment.
 
-#### Testing
+## Testing
 All unit testing was completed using the built in `python manage.py test` command working through each app for the django project, you can find
 the tests written for each app under the 'appname'/'testing' folders, each test suite is written for the views, forms and models of each section. Further testing information can be 
 [found here](https://docs.djangoproject.com/en/2.2/topics/testing/advanced/)
 Coverage was also used to help attain near 100% completion. If there was anything particularly 
 challenging on something that required a lot of testing it will be written up below however if nothing out of the ordinary
 comes up then the unit tests passed correctly and didnt require any further testing for the purposes of the project.
-###### Checkout
-During my struggles to write the stripe code into the project I utilised the builtin Python DeBugger (PDB) tool to help print to the console what was being held in the app at the time, this helped to differentiate between bools and functions whilst getting lost in the code.
 
+Unit Testing the products section was one of the more typical TDD testing I have written, creating the test for the detailed view for the product was very typical, writing the minimal amount of code per run to try and make it pass each time, until it does. Here is a detailed write up:
++ I began this particular test trying to just access the product itself whilst writing it up
+``` python
+class TestProductPages(TestCase):
+    
+    def setUp(self):
+        self.client = Client()
+        ....
+def test_detail_prod_view(self):
+        product = Product(title = 'TestProd')
+        product.save()
+        page = self.client.get('/products/more_info/{0}'.format(id))
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, 'prod_detail.html')
+```
+
++ This resulted in the following problem: `self.assertEqual(page.status_code, 200) AssertionError: 404 != 200`
++ So through this I figured that the 404 was due to the ID not being formatted correctly and amended my code like so:
+``` python
+def test_detail_prod_view(self):
+        product = Product(title = 'TestProd',
+                          pk = id)
+        product.save()
+        page = self.client.get('/products/more_info/{0}'.format(id))
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, 'prod_detail.html')
+``` 
++ The eagle eyed viewer may realise this resulted in a syntax error.
+Next I tried to create the product while calling the id:
+```python
+def test_detail_prod_view(self):
+        product = Product(title = 'TestProd')
+        product.save()
+        id = product.id
+        page = self.client.get('/products/more_info/{0}'.format(id))
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, 'prod_detail.html')
+```
++ This then resulted in the following error: `django.db.utils.IntegrityError: NOT NULL constraint failed: products_product.price`
++ So this got me thinking that in my DB There was another relational object that needed calling for this test to pass: the category so this resulted in the following code:
+```python
+def test_detail_prod_view(self):
+    #Creating the category object before calling it from the product.
+        cat = Category(category="testCat")
+        cat.save()
+
+        product = Product(title = 'TestProd',
+                          price = 24,
+                          category = cat)
+        product.save()
+        id = product.id
+        page = self.client.get('/products/more_info/{0}'.format(id))
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, 'prod_detail.html')
+```
+##### Checkout
+During my struggles to write the stripe code into the project I utilised the builtin Python DeBugger (PDB) tool to help print to the console what was being held in the app at the time, this helped to differentiate between bools and functions whilst getting lost in the code.
 ##### Continuous Integration
 + Travis write up
 
@@ -47,7 +102,6 @@ During my struggles to write the stripe code into the project I utilised the bui
 #### Deployment
 + Will be done on Heroku
 + Mention AWS for static/media hosting
-
 
 
 #### Credits
