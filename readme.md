@@ -8,25 +8,30 @@ This website is inspired by Ebay as an e-commerce website - with a twist. This p
 The website will be focussed on a few different users which shall be expanded upon below.
 1. `New User` On happenstance has found the website through a search engine via optimised keywords - This new user wants to know what the site is for, what they can achieve via registering to the site and what is on offer. Nothing too obtrusive and they can browse at their leisure and be walked through the auctions through categories and tags.
 2. `Previous User` Has been on the site for a while now, has an account and han't yet made any sales or purchases, and via luck has come accross a Splinter from the Lance of St. George - Thus he would like to make some money via an auction. Understanding this he places the item for sale with a time limit of 2 weeks and also a `Buy it!` limit of £1500. Starting the auction at £499 to entice people to go above and beyond the `Buy it!` price.
-3. `Shop User (seller)` This is an experienced user and they may be a business of their own with employees for finding these treasures and the person who runs the online shop. They have recently found a trove of treasures from the Spanish Treasure Fleet. As such they have many items that are of similar look and size and dont want to auction them however sell them off individually with only `Buy it!` options, some of their customers would like to access these and store them in a cart for reviewing until they are ready to purchase. This allows them to keep a tight inventory on what they have left over etc.
-4. `Collector` This user is the main Target audience for the website, this user wants to be able to review all things within certain categories and then make purchases from within them. Storing things as they go along in their cart until ready for order. They also arent sure how trustworthy some sellers are as they had a bad experience with one previously! So they would like the ability to view reviews of the person/shop they may be buying from and also leave a review for an item that they purchased from this seller.
+3. `Collector` This user is the main Target audience for the website, this user wants to be able to review all things within certain categories and then make purchases from within them. Storing things as they go along in their cart until ready for order. They also arent sure how trustworthy some sellers are as they had a bad experience with one previously! So they would like the ability to view reviews of the person/shop they may be buying from and also leave a review for an item that they purchased from this seller.
 
 ## Features
-+ Registration - `New User` Wants to be able to register to the site to be able to make purchases and read reviews on items
-+ Log In - `Previous User` Wants to be able to log in as they didnt complete their sale when going through last time, the site has saved some of the details that they added before but they'd like to complete this to make some money.
-+ Create Auction - `Previous User` Will also need to use this function to complete their sales. They can achieve this buy going through to their account page and finding the create auction area button.
-+ Leave a review - `Collector` - Has had a good experience buying from a particular shop and is exstatic about the quality of a Piece of Eight coin they purchased. This can be done via their "Previous Orders" section within their account.
-+ Remove Auction - `Shop User` Has had a private offer on one of their items with limited availability and would like to remove the item from sale to the public. 
-+ Watch this Product - `Collector` has had their eye on a portrait of Medusa before she became a gorgon and is quite certain he wants to purchase it, however he doesn't want to go too high too quickly and is watching to see how the auction will unfold.
+The premise of the website was originally to be an Ecommerce/Auction website for user to user interaction with sales ran by users kind of like an Ebay application. However throughout the course of development and for the purpose of marking the website I cut down the scope and decided to go for a simpler approach with the same kind of ideas as before.
+
+The site was therefore changed into a more conventional project along the lines of etsy or an Asos store, with login/logout functionality, the ability to peruse and purchase items securely using Stripe integrated into the app with JS and on the backend. 
+
+Some base features:
++ Account CRUD functionality
++ Browsing and filtering products by category, filter by search and by details
++ Storing products in the session for return users and for new users.
++ Authentication required for purchasing products from the site.
 
 ## Technologies
 This project will make use of a collection of tech's that I've used so far through my course.
-+ HTML - For writing the templates in which each view will be written HTML the language of the web will be utilised.
-+ SCSS / CSS - Compiling my stles from Sassy CSS into CSS will help to minimise the amount of coding necessary in the styling of the website.
-+ Bootstrap - For minimising the amount of custom coding necessary within the project this will be used for the grid and layout.
-+ jQuery - This will be used for making the website more interactive for the user and making it more appealing to the eye via DOM manipulation.
-+ Python Django - Python highend language will be used for writing tests, views, urls and linking the backend up to the front end. This will be achieved with Django templating framework.
-+ PostgreSQL / SQLite - Will be used for my database in the back end. Postgres will be used for the heroku hosting and SQLite will be used for testing the site before deployment.
++ [HTML](https://www.w3schools.com/html/html5_intro.asp) - For writing the templates in which each view will be written HTML the language of the web will be utilised.
++ [SCSS / CSS](https://sass-lang.com/) - Compiling my stles from Sassy CSS into CSS will help to minimise the amount of coding necessary in the styling of the website.
++ [Bootstrap](https://getbootstrap.com/) - For minimising the amount of custom coding necessary within the project this will be used for the grid and layout.
++ [jQuery](https://jquery.com/) - This will be used for making the website more interactive for the user and making it more appealing to the eye via DOM manipulation.
++ [Python Django](https://www.djangoproject.com/) - Python highend language will be used for writing tests, views, urls and linking the backend up to the front end. This will be achieved with Django templating framework.
++ [PostgreSQL](https://www.postgresql.org/) / [SQLite](https://www.sqlite.org/index.html) - Will be used for my database in the back end. Postgres will be used for the heroku hosting and SQLite will be used for testing the site before deployment.
++ [Travis CI](https://travis-ci.org/) Travis is a tool for Continuous Integration and helped with a large part of developing the project, used to help test functionality.
++ [Heroku](https://www.heroku.com/) Is a cloud hosting platform for hosting projects and web applications. I have used Heroku to display and host my project.
++ [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) I've used Amazons Web Services to hsot my static and my media files. The S3 Buckets allows a user to create a storage elsewhere and call it from the site from environment variables.
 
 ## Testing
 All unit testing was completed using the built in `python manage.py test` command working through each app for the django project, you can find
@@ -91,14 +96,16 @@ def test_detail_prod_view(self):
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, 'prod_detail.html')
 ```
-##### Checkout
-During my struggles to write the stripe code into the project I utilised the builtin Python DeBugger (PDB) tool to help print to the console what was being held in the app at the time, this helped to differentiate between bools and functions whilst getting lost in the code.
+##### Checkout Issues
+During my struggles to write the stripe code into the project I utilised the builtin Python DeBugger (PDB) tool to help print to the console what was being held in the app at the time, this helped to differentiate between bools and functions whilst getting lost in the code. The PDB tool can be used whilst running the application by using the `set_trace()` function on an object to see whats going on. More info on [PDB can be found here](https://docs.python.org/3/library/pdb.html)
 ##### Continuous Integration
-+ Travis write up
+Throughout the development of the project after setting up Heroku 
 
 + User Stories Testing Manually testing.
 + Am i responsive?
 
+##### Additional Testing Notes
+During Development the creation of models allows for declaring these as `__str__` objects, allowing the administrators to access these through the database backend. This was also used for testing that products and categories. etc were working.
 #### Deployment
 + Will be done on Heroku
 + Mention AWS for static/media hosting
