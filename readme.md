@@ -30,7 +30,8 @@ This project will make use of a collection of tech's that I've used so far throu
 
 #### Testing
 All unit testing was completed using the built in `python manage.py test` command working through each app for the django project, you can find
-the tests written for each app under the 'appname'/'testing' folders, each test suite is written for the views, forms and models of each section. 
+the tests written for each app under the 'appname'/'testing' folders, each test suite is written for the views, forms and models of each section. Further testing information can be 
+[found here](https://docs.djangoproject.com/en/2.2/topics/testing/advanced/)
 Coverage was also used to help attain near 100% completion. If there was anything particularly 
 challenging on something that required a lot of testing it will be written up below however if nothing out of the ordinary
 comes up then the unit tests passed correctly and didnt require any further testing for the purposes of the project.

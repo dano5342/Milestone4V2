@@ -4,12 +4,6 @@ from django.contrib.auth.models import User
 # Create your tests here.
 
 
-global logged_in_user
-def logged_in_user():
-    User.objects.create_user(
-            username='user789', email='test@user.com', password="456user"
-        )
-
 class TestAccountsViewsOut(TestCase):
     def test_register_page(self):
         page = self.client.get('/accounts/register/')
