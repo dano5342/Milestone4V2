@@ -23,7 +23,12 @@ class TestCartViews(TestCase):
     we can run CRUD ops on them
     """
 class TestCartFunctions(TestCase):
+
     def setUp(self):
         self.factory = RequestFactory()
         self.cart_contents = 0
+
+
+    def test_empty_cart(self):
+        cart_contents = 0
         self.assertEqual(cart_contents, 0)
