@@ -1,13 +1,16 @@
 from django.test import TestCase
+from django.contrib.auth.models import User
 from accounts.models import Profile, create_profile
-from .test_views import logged_in_user
+
 
 
 class TestAccountModels(TestCase):
     def test_profile_model(self):
-        username = logged_in_user
+        username = User.objects.create_user(
+            username='user789', email='test@user.com', password='456user'
+        )
         username.save()
-        self.assertEqual(username, 'user789')
+        self.assertEqual(str(username), 'user789')
 
     def test_create_profile(self):
         self.assertTrue('created')
