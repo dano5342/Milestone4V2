@@ -15,31 +15,16 @@
                 <hr>
                 {% for item in cart_items %}
                 {% if item %}
-                <div class="row d-md-none">
-                    <div class="col-12">
-                        <form action="{% url 'remove_from_cart' item.product.id%}" class="remove-but">
-                            {{ form | crispy }}
-                            {% csrf_token %}
-                            <button class="btn btn-primary"><i class="fas fa-times"></i></button>
-                        </form>
-                    </div>
-                </div>
                 <div class="row">
-                    <div class="col-6 col-md-4">
+                    <div class="col-12 col-md-4">
                         <img src="{{MEDIA_URL}}{{item.product.image}}" alt="{{item.product.title}}" class="cart-image">
                     </div>
-                    <div class="col-6 col-md-4">
+                    <div class="col-12 col-md-4">
                         <h5>{{ item.product.title }}</h5>
                         <p class="text"> {{ item.product.summary }}</p>
                         <p class="price"><i class="fas fa-euro-sign"></i> {{ item.product.price }}</p>
                     </div>
                     <div class="col-12 col-md-4">
-                        <form action="{% url 'remove_from_cart' item.product.id%}" class="remove-but d-none d-md-block">
-                            {{ form | crispy }}
-                            {% csrf_token %}
-                            <button class="btn btn-primary"><i class="fas fa-times"></i></button>
-                        </form>
-                        <p> Quantity </p>
                         <form class="form-inline" method="post" action="{% url 'change_cart' item.id %}">
                             {% csrf_token %}
                             {{ form | crispy }}
@@ -60,6 +45,7 @@
                             <button type="submit" class="btn btn-success form-margin"><i class="fas fa-edit"></i>
                                 Amend</button>
                         </form>
+                        <small><a href="{% url 'remove_from_cart' item.product.id%}">Remove?</a></small>
                     </div>
                 </div>
                 {% endif %}
@@ -69,10 +55,13 @@
         </div>
         <div class="total-container">
             <div class="padding">
-                <h3 class="title">Total</h3>
-                <p class="price"><i class="fas fa-euro-sign"></i> {{ total }}</p>
-                <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><i
-                        class="fas fa-cash-register"></i> Checkout</a>
+                <h3 class="price">Total: <i class="fas fa-euro-sign"></i> {{ total }}</h3>
+                <div class="justify-content-center">
+                    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><i
+                            class="fas fa-cash-register"></i> Checkout</a>
+                    <hr>
+                    <small><a href="{% url 'products'%}">Continue shopping?</a></small>
+                </div>
             </div>
         </div>
     </div>
