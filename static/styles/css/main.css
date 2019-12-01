@@ -60,17 +60,24 @@
     color: #F2D0A7; }
 
 /* Main */
-body,
 html {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  padding-top: 48px;
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  /*min-height: 100vh;
+  min-width: 99%;
+  max-width: 99%;
+  
+  padding: 0; */
+  padding-top: 60px;
   height: 100%;
   font-family: 'Arima Maduri', sans-serif;
   font-weight: 500;
   background-color: #F2F2F2;
-  position: relative; }
+  position: relative;
+  margin: 0;
+  max-width: 100%; }
 
 .push {
   padding-top: 120px !important; }
@@ -93,7 +100,7 @@ html {
   min-width: 100%;
   position: relative;
   text-align: center;
-  padding-top: 80px; }
+  padding-top: 35px; }
 
 .centered {
   position: absolute;
@@ -104,8 +111,7 @@ html {
 .bottom-right {
   position: relative;
   margin-top: 8px;
-  color: black;
-  left: 360px; }
+  color: black; }
 
 .landing-image {
   height: 40rem;
@@ -189,7 +195,7 @@ html {
 
 .panel-default {
   border-color: transparent;
-  padding: 10px 7px;
+  padding: 18px;
   border: 4px; }
 
 .card:hover {
@@ -211,6 +217,12 @@ html {
   max-height: 250px;
   min-height: 250px;
   border-radius: inherit; }
+
+.card-img-top-mfy {
+  max-height: 200px;
+  min-height: 200px;
+  border-radius: inherit;
+  width: 100%; }
 
 #quantity-bar {
   width: 40%;
@@ -236,10 +248,14 @@ html {
   background-color: #404040;
   border-color: #404040;
   color: #F2F2F2; }
-  .page-link:hover, .page-link:active {
+  .page-link:hover {
     color: #0d0d0d;
     background-color: #bfbfbf;
     border-color: #bfbfbf; }
+  .page-link.active {
+    color: #404040;
+    background-color: #bfbfbf;
+    border: #bfbfbf; }
 
 /* Profile Styles */
 .account-img {
@@ -292,10 +308,11 @@ section {
 
 /* Footer */
 #sticky-footer {
-  flex-shrink: none;
   background-color: #404040;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  padding: 120px;
+  border: 1px solid #404040; }
 
 .unordered {
   list-style-type: none; }
@@ -321,11 +338,15 @@ section {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
   body {
-    padding-top: 12px; }
+    padding-top: 35px;
+    max-width: 100%; }
 
   /* Landing Styles */
   .img-container {
-    padding-top: 80px; }
+    padding-top: 12px; }
+
+  .landing-title {
+    padding: 12px; }
 
   .landing-image {
     width: 100%;
@@ -379,9 +400,20 @@ section {
 
   .remove-but {
     margin-left: 301px;
-    margin-bottom: 7px; } }
+    margin-bottom: 7px; }
+
+  /* footer */
+  #sticky-footer {
+    flex-shrink: none;
+    background-color: #404040;
+    position: absolute;
+    width: 100%;
+    padding: 4px; } }
 /* Tablets */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .img-container {
+    padding-top: 35px; }
+
   .landing-image {
     height: 40rem;
     border-radius: 27px;
@@ -402,15 +434,16 @@ section {
     align-items: center;
     border-radius: 20px; }
 
-  .about {
-    margin: 12px; }
-
   .text-muted .redir {
     color: #6c757d !important;
     margin-left: 330px; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   body {
-    padding-top: 12px; }
+    padding-top: 12px;
+    max-width: 100%; }
+
+  .img-container {
+    padding-top: 35px; }
 
   .detail-image {
     height: 35vh; }

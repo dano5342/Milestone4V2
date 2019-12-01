@@ -16,7 +16,7 @@
             </a>
         </h4>
     </div>
-    <div class="row">
+    <div class="about-container">
         <div class="col justify-content-center about">
             <h2 class="title">
                 Our Products
@@ -34,26 +34,24 @@
 </section>
 <section class="container-fluid">
     <div class="container categories">
-        <div class="categories">
-            <div class="row">
-                {% for category in category %}
-                <div class="col-sm">
-                    <div class="cat-container text-center">
-                        {% if category.category == 'Arms & Armour' %}
-                        <a class="link-unstyled" href="{% url 'products'%}?category=Arms+%26+Armour">
-                            <h2 class="title">{{ category.category }}</h2>
-                            <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
-                        </a>
-                        {% else %}
-                        <a class="link-unstyled" href="{% url 'products' %}?category={{category.category}}">
-                            <h2 class="title">{{ category.category }}</h2>
-                            <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
-                        </a>
-                        {% endif %}
-                    </div>
+        <div class="row">
+            {% for category in category %}
+            <div class="col-sm">
+                <div class="cat-container text-center">
+                    {% if category.category == 'Arms & Armour' %}
+                    <a class="link-unstyled" href="{% url 'products'%}?category=Arms+%26+Armour">
+                        <h2 class="title">{{ category.category }}</h2>
+                        <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
+                    </a>
+                    {% else %}
+                    <a class="link-unstyled" href="{% url 'products' %}?category={{category.category}}">
+                        <h2 class="title">{{ category.category }}</h2>
+                        <img class="info-image" src="{{MEDIA_URL}}{{category.image}}" alt="{{category.category}}">
+                    </a>
+                    {% endif %}
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
