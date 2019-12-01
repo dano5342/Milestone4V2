@@ -2,7 +2,7 @@
 wireframes [here](https://drive.google.com/open?id=1eMpOrnaVDADfW-CZU_iwkKvDAcTaU4fH) and please download free [Adobe XD](https://www.adobe.com/lu_de/products/xd.html) to view these frames properly!
 [![Build Status](https://travis-ci.org/dano5342/Milestone4V2.svg?branch=master)](https://travis-ci.org/dano5342/Milestone4V2)
 ## Overview
-This website is inspired by Ebay as an e-commerce website - with a twist. This project is going to be built purely upon historical artifacts of myth and legend, with maybe a few actual items thrown in as well. This website will be intended for collectors and sellers as will be storied upon below in my UX section. Think of these items as an offshoot of the old Catholic way of buying into heaven by way of [Indulgences](https://en.wikipedia.org/wiki/Indulgence). 
+This website is inspired by Ebay as an e-commerce website - with a twist. This project is going to be built purely upon historical artifacts of myth and legend, with maybe a few actual items thrown in as well. This website will be intended for collectors and sellers as will be storied upon below in my UX section. Think of these items as an offshoot of the old Catholic way of buying into heaven by way of [Indulgences](https://en.wikipedia.org/wiki/Indulgence).
 
 ## UX
 The website will be focussed on a few different users which shall be expanded upon below.
