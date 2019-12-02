@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .views import  all_products, MoreInfo
+from .views import all_products, MoreInfo
 
 
 urlpatterns = [

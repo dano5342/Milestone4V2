@@ -3,7 +3,7 @@ from .models import Product, Category
 from django.views.generic import DetailView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
-# Create your views here.
+
 def all_products(request, category_name=None):
     """
     Displays all products, with the option of declaring
@@ -17,11 +17,12 @@ def all_products(request, category_name=None):
         category = get_object_or_404(Category, category_name)
         products = Product.objects.filter(category=category).order_by('-pubd')
 
-
     if request.GET.getlist('category'):
         selected = Category.objects.filter(
             category__in=request.GET.getlist('category'))
-        products = [product for product in products if product.category in selected]
+        products = ([product for product
+                    in products if product.category
+                    in selected])
 
     paginator = Paginator(products, 9)
     page = request.GET.get('page', 1)
@@ -32,8 +33,6 @@ def all_products(request, category_name=None):
         products = paginator.page(1)
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
-
-
     args = {'products': products, 'category': category}
     return render(request, 'all_products.html', args)
 
@@ -51,17 +50,17 @@ class MoreInfo(DetailView):
     context_object_name = 'product'
     extra_context = {}
 
-
     def get_object(self, queryset=Product):
         _id = self.kwargs.get('pk')
         instance = get_object_or_404(Product, id=_id)
 
         self.extra_context['product'] = instance
-        self.extra_context['more_prods'] = Product.objects.all().filter(category=instance.category).exclude(id=_id).order_by('-pubd')[:6]
+        self.extra_context['more_prods'] = (Product.objects.all()
+                                            .filter(category=instance.category)
+                                            .exclude(id=_id)
+                                            .order_by('-pubd')[:6])
         self.extra_context['category'] = Category.objects.all()
         return instance
-
-
 
     def post(self, request, *args, **kwargs):
         _id = self.kwargs.get('pk')
