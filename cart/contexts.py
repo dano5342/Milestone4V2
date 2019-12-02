@@ -8,7 +8,7 @@ def cart_contents(request):
     """
     category = Category.objects.all()
     cart = request.session.get('cart', {})
-    i_range = [1,2,3,4,5,6]
+    i_range = [1, 2, 3, 4, 5, 6]
     cart_items = []
     total = 0
     product_count = 0
@@ -17,7 +17,7 @@ def cart_contents(request):
         product = get_object_or_404(Product, pk=id)
         total += quantity * product.price
         product_count += quantity
-        cart_items.append({'id': id, 'quantity': quantity, 'product': product})  
-    return({'cart_items': cart_items, 'total': total, 
+        cart_items.append({'id': id, 'quantity': quantity, 'product': product})
+    return({'cart_items': cart_items, 'total': total,
             'product_count': product_count,
-            'i_range': i_range, 'category':category})
+            'i_range': i_range, 'category': category})
