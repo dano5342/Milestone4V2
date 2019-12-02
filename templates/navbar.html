@@ -14,6 +14,15 @@
                  <li class="nav-item">
                      <a href="{% url 'products' %}" class="nav-link">All Products</a>
                  </li>
+                 <li class="nav-item">
+                     <a href="{% url 'about' %}" class="nav-link">About</a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="{% url 'jobs' %}" class="nav-link">Careers</a>
+                 </li>
              </ul>
              <div class="align-center mx-auto collapse navbar-collapse" id="searchbar">
                  <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="GET">
