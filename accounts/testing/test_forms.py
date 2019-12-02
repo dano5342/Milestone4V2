@@ -16,5 +16,6 @@ class TestAccountForms(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_profile_update_form(self):
-        form = ProfileUpdate({'image': 'http://phinational.org/wp-content/uploads/2017/07/fb-test-image-470x246.jpg'})
+        form = ProfileUpdate({'image':
+                              'https://via.placeholder.com/350x65'})
         self.assertTrue(form.is_valid())
