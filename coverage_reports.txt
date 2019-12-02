@@ -1,0 +1,205 @@
+Overall App: 
+    
+    Name                                                        Stmts   Miss  Cover
+    -------------------------------------------------------------------------------
+    accounts\__init__.py                                            0      0   100%
+    accounts\admin.py                                               3      0   100%
+    accounts\forms.py                                              18      0   100%
+    accounts\migrations\0001_initial.py                             7      0   100%
+    accounts\migrations\0002_useraddress.py                         4      0   100%
+    accounts\migrations\0003_useraddress_user.py                    6      0   100%
+    accounts\migrations\0004_auto_20191120_0938.py                  6      0   100%
+    accounts\migrations\0005_delete_useraddress.py                  4      0   100%
+    accounts\migrations\__init__.py                                 0      0   100%
+    accounts\models.py                                             10      3    70%
+    accounts\testing\__init__.py                                    0      0   100%
+    accounts\testing\test_forms.py                                 12      0   100%
+    accounts\testing\test_models.py                                10      0   100%
+    accounts\testing\test_views.py                                 27      0   100%
+    accounts\urls.py                                                3      0   100%
+    accounts\views.py                                              33     18    45%
+    cart\__init__.py                                                0      0   100%
+    cart\admin.py                                                   1      0   100%
+    cart\contexts.py                                               15      4    73%
+    cart\migrations\__init__.py                                     0      0   100%
+    cart\models.py                                                  1      0   100%
+    cart\testing\__init__.py                                        0      0   100%
+    cart\testing\test_forms.py                                      1      0   100%
+    cart\testing\test_models.py                                     1      0   100%
+    cart\testing\test_views.py                                     19      0   100%
+    cart\urls.py                                                    3      0   100%
+    cart\views.py                                                  32     24    25%
+    checkout\__init__.py                                            0      0   100%
+    checkout\admin.py                                               7      0   100%
+    checkout\forms.py                                              14      0   100%
+    checkout\migrations\0001_initial.py                             6      0   100%
+    checkout\migrations\__init__.py                                 0      0   100%
+    checkout\models.py                                             20      2    90%
+    checkout\testing\__init__.py                                    0      0   100%
+    checkout\testing\test_forms.py                                  6      0   100%
+    checkout\testing\test_views.py                                 19      0   100%
+    checkout\urls.py                                                3      0   100%
+    checkout\views.py                                              44     27    39%
+    custom_storages.py                                              6      0   100%
+    home\__init__.py                                                0      0   100%
+    home\admin.py                                                   1      0   100%
+    home\forms.py                                                   8      0   100%
+    home\migrations\__init__.py                                     0      0   100%
+    home\testing\__init__.py                                        0      0   100%
+    home\testing\test_views.py                                      6      0   100%
+    home\urls.py                                                    3      0   100%
+    home\views.py                                                  31     18    42%
+    manage.py                                                      12      2    83%
+    ms4\__init__.py                                                 0      0   100%
+    ms4\settings.py                                                51      2    96%
+    ms4\urls.py                                                    14      0   100%
+    products\__init__.py                                            0      0   100%
+    products\admin.py                                               4      0   100%
+    products\migrations\0001_initial.py                             7      0   100%
+    products\migrations\0002_auto_20191017_0835.py                  6      0   100%
+    products\migrations\0003_product_image.py                       4      0   100%
+    products\migrations\0004_remove_product_sold_by.py              4      0   100%
+    products\migrations\0005_auto_20191101_1239.py                  4      0   100%
+    products\migrations\0006_remove_category_c_description.py       4      0   100%
+    products\migrations\0007_category_description.py                4      0   100%
+    products\migrations\0008_product_pubd.py                        5      0   100%
+    products\migrations\0009_auto_20191115_1035.py                  4      0   100%
+    products\migrations\__init__.py                                 0      0   100%
+    products\models.py                                             19      1    95%
+    products\testing\__init__.py                                    0      0   100%
+    products\testing\test_models.py                                15      0   100%
+    products\testing\test_views.py                                 25      0   100%
+    products\urls.py                                                3      0   100%
+    products\views.py                                              42      8    81%
+    search\__init__.py                                              0      0   100%
+    search\migrations\__init__.py                                   0      0   100%
+    search\testing\__init__.py                                      0      0   100%
+    search\urls.py                                                  3      0   100%
+    search\views.py                                                 8      5    38%
+    -------------------------------------------------------------------------------
+    TOTAL                                                         628    114    82%
+
+MS4:
+    Name              Stmts   Miss  Cover
+    -------------------------------------
+    ms4\__init__.py       0      0   100%
+    ms4\settings.py      51      2    96%
+    ms4\urls.py          14      0   100%
+    ms4\wsgi.py           4      4     0%
+    -------------------------------------
+    TOTAL                69      6    91%
+
+
+
+Accounts App:
+
+    Name                                             Stmts   Miss  Cover
+    --------------------------------------------------------------------
+    accounts\__init__.py                                 0      0   100%
+    accounts\admin.py                                    3      0   100%
+    accounts\apps.py                                     3      3     0%
+    accounts\forms.py                                   18      0   100%
+    accounts\migrations\0001_initial.py                  7      0   100%
+    accounts\migrations\0002_useraddress.py              4      0   100%
+    accounts\migrations\0003_useraddress_user.py         6      0   100%
+    accounts\migrations\0004_auto_20191120_0938.py       6      0   100%
+    accounts\migrations\0005_delete_useraddress.py       4      0   100%
+    accounts\migrations\__init__.py                      0      0   100%
+    accounts\models.py                                  10      3    70%
+    accounts\testing\__init__.py                         0      0   100%
+    accounts\testing\test_forms.py                      12      0   100%
+    accounts\testing\test_models.py                     10      0   100%
+    accounts\testing\test_views.py                      27      0   100%
+    accounts\urls.py                                     3      0   100%
+    accounts\views.py                                   33     18    45%
+    --------------------------------------------------------------------
+    TOTAL                                              146     24    84%
+
+Cart App:
+    Name                          Stmts   Miss  Cover
+    -------------------------------------------------
+    cart\__init__.py                  0      0   100%
+    cart\admin.py                     1      0   100%
+    cart\apps.py                      3      3     0%
+    cart\contexts.py                 15      4    73%
+    cart\migrations\__init__.py       0      0   100%
+    cart\models.py                    1      0   100%
+    cart\testing\__init__.py          0      0   100%
+    cart\testing\test_forms.py        1      0   100%
+    cart\testing\test_models.py       1      0   100%
+    cart\testing\test_views.py       19      0   100%
+    cart\urls.py                      3      0   100%
+    cart\views.py                    32     24    25%
+    -------------------------------------------------
+    TOTAL                            76     31    59%
+
+Checkout APP:
+    Name                                  Stmts   Miss  Cover
+    ---------------------------------------------------------
+    checkout\__init__.py                      0      0   100%
+    checkout\admin.py                         7      0   100%
+    checkout\apps.py                          3      3     0%
+    checkout\forms.py                        14      0   100%
+    checkout\migrations\0001_initial.py       6      0   100%
+    checkout\migrations\__init__.py           0      0   100%
+    checkout\models.py                       20      2    90%
+    checkout\testing\__init__.py              0      0   100%
+    checkout\testing\test_forms.py            6      0   100%
+    checkout\testing\test_views.py           19      0   100%
+    checkout\urls.py                          3      0   100%
+    checkout\views.py                        44     27    39%
+    ---------------------------------------------------------
+    TOTAL                                   122     32    74%
+
+Home App: 
+    Name                          Stmts   Miss  Cover
+    -------------------------------------------------
+    home\__init__.py                  0      0   100%
+    home\admin.py                     1      0   100%
+    home\apps.py                      3      3     0%
+    home\forms.py                     8      0   100%
+    home\migrations\__init__.py       0      0   100%
+    home\testing\__init__.py          0      0   100%
+    home\testing\test_views.py        6      0   100%
+    home\urls.py                      3      0   100%
+    home\views.py                    31     18    42%
+    -------------------------------------------------
+    TOTAL                            52     21    60%
+
+Products APP : 
+Name                                                        Stmts   Miss  Cover
+    -------------------------------------------------------------------------------
+    products\__init__.py                                            0      0   100%
+    products\admin.py                                               4      0   100%
+    products\apps.py                                                3      3     0%
+    products\migrations\0001_initial.py                             7      0   100%
+    products\migrations\0002_auto_20191017_0835.py                  6      0   100%
+    products\migrations\0003_product_image.py                       4      0   100%
+    products\migrations\0004_remove_product_sold_by.py              4      0   100%
+    products\migrations\0005_auto_20191101_1239.py                  4      0   100%
+    products\migrations\0006_remove_category_c_description.py       4      0   100%
+    products\migrations\0007_category_description.py                4      0   100%
+    products\migrations\0008_product_pubd.py                        5      0   100%
+    products\migrations\0009_auto_20191115_1035.py                  4      0   100%
+    products\migrations\__init__.py                                 0      0   100%
+    products\models.py                                             19      1    95%
+    products\testing\__init__.py                                    0      0   100%
+    products\testing\test_models.py                                15      0   100%
+    products\testing\test_views.py                                 25      0   100%
+    products\urls.py                                                3      0   100%
+    products\views.py                                              42      8    81%
+    -------------------------------------------------------------------------------
+    TOTAL                                                         153     12    92%
+
+Search APP:
+    Name                            Stmts   Miss  Cover
+    ---------------------------------------------------
+    search\__init__.py                  0      0   100%
+    search\admin.py                     1      1     0%
+    search\apps.py                      3      3     0%
+    search\migrations\__init__.py       0      0   100%
+    search\testing\__init__.py          0      0   100%
+    search\urls.py                      3      0   100%
+    search\views.py                     8      5    38%
+    ---------------------------------------------------
+    TOTAL                              15      9    40%
