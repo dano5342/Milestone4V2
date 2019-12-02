@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from accounts.models import Profile, create_profile
 
 
-
 class TestAccountModels(TestCase):
     def test_profile_model(self):
         username = User.objects.create_user(

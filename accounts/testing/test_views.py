@@ -10,7 +10,6 @@ class TestAccountsViewsOut(TestCase):
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, 'register.html')
 
-
     def test_registration_function(self):
         page = self.client.get('/accounts/register/')
         created = User.objects.create_user(
@@ -32,11 +31,11 @@ class TestAccountsViewsIn(TestCase):
         self.user = User.objects.create_user(
             username='user789', email='test@user.com', password="456user"
         )
-    
+
     def test_registration_page(self):
         request = self.factory.get('/')
         request.user = self.user
         response = register(request)
-        
+
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, "/")
