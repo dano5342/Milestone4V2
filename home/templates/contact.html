@@ -10,18 +10,23 @@
         <div class="row">
             <div class="col-12">
                 <p class="text">
-                    If you've any questions regarding our products, prices, location or generaly enquiries 
+                    If you've any questions regarding our products, prices, location or generaly enquiries
                     please dont hesitate to drop us a line here on our form, or call us on +44 12345678990
                 </p>
                 <p class="text">We'll endeavour to get back to you as soon as we can, usually within 24 hours.</p>
             </div>
+
         </div>
+        <hr>
         <div class="row">
             <div class="col-12 justify-content-center">
                 <form role="form" method="POST" action="{% url 'contact' %}" class="c-form">
                     {% csrf_token %}
                     {{ contact_form | crispy }}
-                    <button class="btn btn-success" action="submit">Send!</button>
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-success" action="submit">Send!</button>
+                    </div>
                 </form>
             </div>
         </div>
