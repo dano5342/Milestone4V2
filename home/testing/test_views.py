@@ -1,7 +1,6 @@
 from django.test import TestCase
 
 
-
 class TestHomeView(TestCase):
 
     def test_get_home_page(self):

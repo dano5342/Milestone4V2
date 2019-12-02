@@ -13,7 +13,7 @@ def index(request, category_name=None):
     """
     category = Category.objects.all()
     args = {'category': category}
-    
+
     return render(request, 'index.html', args)
 
 
@@ -39,7 +39,7 @@ def contact(request):
     """
     if request.method == 'GET':
         form = ContactForm()
-    else: 
+    else:
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
@@ -47,8 +47,16 @@ def contact(request):
             email_address = form.cleaned_data['email_address']
             message = form.cleaned_data['message']
             to_list = [email_address]
-            send_mail(subject, message, from_email, to_list, fail_silently=False)
-            messages.success(request, 'We\'ve received your message, and shall be back with you shortly')
+            send_mail(
+                subject,
+                message,
+                from_email,
+                to_list,
+                fail_silently=False)
+            messages.success(
+                request,
+                """We\'ve received your message,
+                and shall be back with you shortly""")
         return redirect('products')
     context = {'contact_form': form}
     return render(request, 'contact.html', context)
