@@ -104,7 +104,7 @@ def test_detail_prod_view(self):
 #### Checkout Issues
 During my struggles to write the stripe code into the project I utilised the builtin Python DeBugger (PDB) tool to help print to the console what was being held in the app at the time, this helped to differentiate between bools and functions whilst getting lost in the code. The PDB tool can be used whilst running the application by using the `set_trace()` function on an object to see whats going on. More info on [PDB can be found here](https://docs.python.org/3/library/pdb.html)
 #### Continuous Integration
-Throughout the development of the project after setting up Heroku 
+Throughout the development of the project after setting up Heroku, TRAVIS CI tool was utilised to ensure that the builds would be runnable on the Heroku Application, the commands for this are contained within the Travis.yml file above.
 
 #### User Stories
 

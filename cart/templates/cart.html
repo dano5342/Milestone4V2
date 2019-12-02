@@ -33,6 +33,7 @@ Your Cart
                     <div class="col-12 col-md-4">
                         <form class="form-inline" method="post" action="{% url 'change_cart' item.id %}">
                             {% csrf_token %}
+                            <!--Form to amend item quantity-->
                             {{ form | crispy }}
                             <div class="form-group form-margin">
                                 <label for="exampleInputAmount" class="sr-only">New Qty</label>
@@ -51,7 +52,7 @@ Your Cart
                             <button type="submit" class="btn btn-success form-margin"><i class="fas fa-edit"></i>
                                 Amend</button>
                         </form>
-
+    <!-- Action to remove item-->
                         <small><a href="{% url 'remove_from_cart' item.product.id%}">Remove?</a></small>
                     </div>
                 </div>
@@ -64,6 +65,7 @@ Your Cart
             <div class="flex-row">
                 <h3 class="price">Total: <i class="fas fa-euro-sign"></i> {{ total }}</h3>
             </div>
+            <!-- Checkout follow on-->
             <div class="row but-row">
                 <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><i
                         class="fas fa-cash-register"></i> Checkout</a>

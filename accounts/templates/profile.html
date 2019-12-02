@@ -25,7 +25,9 @@ Your Profile
           {% csrf_token %}
           <fieldset class="form-group">
             <legend class="border-bottom mb-4">Change Information?</legend>
+            <!--Update USername-->
             {{ update_form | crispy }}
+            <!--Update Profile Pic-->
             {{ profile_form | crispy }}
           </fieldset>
           <div class="form-group">
