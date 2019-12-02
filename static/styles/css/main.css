@@ -25,7 +25,7 @@
   position: absolute;
   right: 0%;
   top: 0%;
-  content: attr(data-count integer);
+  content: attr(data-count);
   font-size: 30%;
   padding: .6em;
   border-radius: 999px;
@@ -445,7 +445,6 @@ section {
 
   /* footer */
   #sticky-footer {
-    flex-shrink: none;
     background-color: #404040;
     position: absolute;
     width: 100%;
