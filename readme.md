@@ -1,7 +1,11 @@
 # Milestone Project 4 - Auction E-Commerce App
 wireframes [here](https://drive.google.com/open?id=1eMpOrnaVDADfW-CZU_iwkKvDAcTaU4fH) and please download free [Adobe XD](https://www.adobe.com/lu_de/products/xd.html) to view these frames properly!
 [![Build Status](https://travis-ci.org/dano5342/Milestone4V2.svg?branch=master)](https://travis-ci.org/dano5342/Milestone4V2)
+
 [![Valid CSS!](http://jigsaw.w3.org/css-validator/images/vcss)](http://jigsaw.w3.org/css-validator/check/referer)
+
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+
 ## Overview
 This website is inspired by Ebay as an e-commerce website - with a twist. This project is going to be built purely upon historical artifacts of myth and legend, with maybe a few actual items thrown in as well. This website will be intended for collectors and sellers as will be storied upon below in my UX section. Think of these items as an offshoot of the old Catholic way of buying into heaven by way of [Indulgences](https://en.wikipedia.org/wiki/Indulgence).
 
@@ -33,7 +37,7 @@ This project will make use of a collection of tech's that I've used so far throu
 + [Travis CI](https://travis-ci.org/) Travis is a tool for Continuous Integration and helped with a large part of developing the project, used to help test functionality.
 + [Heroku](https://www.heroku.com/) Is a cloud hosting platform for hosting projects and web applications. I have used Heroku to display and host my project.
 + [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) I've used Amazons Web Services to hsot my static and my media files. The S3 Buckets allows a user to create a storage elsewhere and call it from the site from environment variables.
-
++ [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html)
 ## Testing
 All unit testing was completed using the built in `python manage.py test` command working through each app for the django project, you can find
 the tests written for each app under the 'appname'/'testing' folders, each test suite is written for the views, forms and models of each section. Further testing information can be 
@@ -97,25 +101,82 @@ def test_detail_prod_view(self):
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, 'prod_detail.html')
 ```
-##### Checkout Issues
+#### Checkout Issues
 During my struggles to write the stripe code into the project I utilised the builtin Python DeBugger (PDB) tool to help print to the console what was being held in the app at the time, this helped to differentiate between bools and functions whilst getting lost in the code. The PDB tool can be used whilst running the application by using the `set_trace()` function on an object to see whats going on. More info on [PDB can be found here](https://docs.python.org/3/library/pdb.html)
-##### Continuous Integration
+#### Continuous Integration
 Throughout the development of the project after setting up Heroku 
 
-+ User Stories Testing Manually testing.
-+ Am i responsive?
-
-##### Additional Testing Notes
-During Development the creation of models allows for declaring these as `__str__` objects, allowing the administrators to access these through the database backend. This was also used for testing that products and categories. etc were working.
-#### Deployment
-+ Will be done on Heroku
-+ Mention AWS for static/media hosting
+#### User Stories
 
 
-#### Credits
+#### Additional Testing Notes
+* During Development the creation of models allows for declaring these as `__str__` objects, allowing the administrators to access these through the database backend. This was also used for testing that products and categories. etc were working.
+* [Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/) Was also utilised for seeing what my unit testing coverage managed, it's at 82% and I'm extremely pleased with this amount, its enough to show that full testing has been done and its not over the top at 100% to show that too much time was spent testing before deploying the app.
+
+
+## Deployment
+I've deployed the website on the cloud hosting platform Heroku, as mentioned above this platform is great for new developers wanting to showcase an application or website that also utilises a backend data set for manipulation on the frontent. 
+
+#### Deploying Locally:
+To deploy this project locally you will need one of the following installed on your machine:
+* [VSCode](https://code.visualstudio.com/)
+
+* [Sublime Text](https://www.sublimetext.com/)
+* Or alternatively you can Fork/Clone this project into a new repository and run it through [GitPod](https://www.gitpod.io/)
+
+
+You will need to also install the following to ensure that you are able to work with the project:
+* [PIP](https://pip.pypa.io/en/stable/installing/)
+* [Python 3](https://www.python.org/downloads/)
+* [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+
+If you are unfamiliar with any of these take some time to go through the documentation to figure out If you will need to setup any       `alias commands` to set up `python` as the default python3.8 command, otherwise you WILL need to run `python3` everytime below that python is mentioned.
+
+##### Setup:
+1. `git clone https://github.com/dano5342/Milestone4V2` this repository from the command line into your IDE or save a ZIP file from [here](https://github.com/dano5342/Milestone4V2) and use the green button to download the files.
+2. From your IDE, direct your workspace here so that you'll be able to manipulate the files A. From the command terminal and B. in your text editor.
+3. This is where the aforementioned [Virtual Environment](https://docs.python.org/3/tutorial/venv.html) comes in handy, this is a tool for blocking off all the background noise from your machine and lets you install all the packages required for running the application without any interference from anything else. the command for this is `python -m venv "NAME OF YOUR VirtualENV"` 
+
+This next point will have two versions, one for MAC users and one for Windows.
+
+
+4. For windows to activate the venv you'll need to run `.\\Scripts\activate` (This will need to be done from the main library folder that contains the `Scripts` folder).   // For Mac Users this command is `source "NAMEOFVENV"/bin/activate`
+5. Run the local install command from this repo's requirements.txt MAC: `sudo pip3 install -r requirements.txt` For windows this is `pip install -r requirements.txt`
+6. You'll need to now create a new folder within the top level of this project (the main file), I usually name this file `env.py` for simplicity sake, however you can on a mac/linux use a .bashrc or .bashprofile file to manipulate these variables. Within this folder you will need to write the following code:
+
+```python 
+import os
+
+
+os.environ.setdefault('SECRET_KEY', 'YOUR_SECRET_KEY')
+os.environ.setdefault('STRIPE_PUBLISHABLE', 'STRIPE_PUBLISHABLE_KEY') #<-- Stripe
+os.environ.setdefault('STRIPE_SECRET', 'YOUR_STRIPE_SECRET_KEY')
+os.environ.setdefault('DATABASE_URL', 'HEROKU_POSTGRES_CREATED_DB_URL')# <-- Heroku
+os.environ.setdefault('AWS_ACCESS_KEY_ID', 'YOUR_AWS_ACCESS_KEY')# <-- AWS
+os.environ.setdefault('AWS_SECRET_ACCESS_KEY', 'YOUR_AWS_SECRET_ACCESS_KEY')
+os.environ.setdefault('EMAIL_USER', 'YOUR_EMAIL_ADDRESS') # <-- Gmail SMTP
+os.environ.setdefault('EMAIL_PASS', 'YOUR_EMAIL_PASSWORD')
+```
+Legend: 
+        
+Stripe: A stripe account is required, please follow this [guide](https://www.google.com/search?q=stripe+documentation+python&rlz=1C1CHWA_enGB604GB604&oq=stripe+documentation+python&aqs=chrome..69i57.3483j0j7&sourceid=chrome&ie=UTF-8) to ensure you have this correctly set up.
+        
+        
+Heroku: An account is required with Heroku for this to work, during the deployment of the website make sure to go to the projects page on Heroku and set up the Postgres resource.
+        
+        
+AWS: An AWS account will be required for this, along with bucket access and S3 for keychain access, please follow [this guide](https://docs.aws.amazon.com/s3/index.html) for full information on how to set this up. 
+        
+GMAIL SMTP: For sending EMAILS within this app to users, you will require an email account with GMAIL for this version of the app, this guide [here](https://medium.com/@_christopher/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e) shows you how to setup the mailing from the app to the user, and [this one here](https://devanswers.co/create-application-specific-password-gmail/) allows you to setup your Gmail from applications
+
+
+7. With all of this setup, and with any luck you should be able to run this following command: `python manage.py makemigrations` If this step works, run `python manage.py migrate` This will allow you access to the data models on the backend and creates a new file db.sqlite3 in your workspace. However if the first command has not worked, make sure that in `settings.py` this is true: `DEBUG: True`
+8. Providing all this has worked, you should now be able to create an adminstrator for the application, you can do this by running `python manage.py createsuperuser` Follow the terminal line text to see what to do next. Following the setup of this user, you can now run the project!
+9. Finally run `python manage.py runserver` To run the webapp locally on your machine.
+## Credits
 A lot of the imagery and photos received inspiration from the posters at [reddits artefact subreddit](https://www.reddit.com/r/ArtefactPorn/)
-##### Content
-##### Media
+
+### Media
 Disclaimer: I Do not own any of the images and or photos mentioned herein below, with all certainty have I tried to credit the author/owner where required and free to use/public domain images have been credited where possible too. 
 
 
