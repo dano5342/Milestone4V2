@@ -1,8 +1,9 @@
 from django.test import TestCase, Client, RequestFactory
 from django.contrib.auth.models import User
 
+
 class TestCheckoutViewOut(TestCase):
-    
+
     def setUp(self):
         self.client = Client()
 
@@ -15,6 +16,7 @@ class TestCheckoutViewOut(TestCase):
         self.assertEqual(page.status_code, 302)
         self.assertEqual(page.url, '/login/?next=/checkout/')
 
+
 class TestCheckoutViewIn(TestCase):
 
     def setUp(self):
@@ -22,7 +24,6 @@ class TestCheckoutViewIn(TestCase):
         self.user = User.objects.create_user(
             username='user789', email='test@user.com', password='456user'
         )
-
 
     def test_checkout_view(self):
         client = Client()
