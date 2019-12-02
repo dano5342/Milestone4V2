@@ -3,7 +3,7 @@ from django import forms
 
 class ContactForm(forms.Form):
     name = forms.CharField(required=True)
-    from_email = forms.EmailField(required=True)
+    email_address = forms.EmailField(required=True)
     subject = forms.CharField(required=True)
     message = forms.CharField(
         required=True, 
@@ -11,5 +11,5 @@ class ContactForm(forms.Form):
     )
     class Meta:
         fields = [
-            'name', 'subject', 'from_email', 'message'
+            'name', 'subject', 'email_address', 'message'
         ]

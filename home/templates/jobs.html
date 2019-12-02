@@ -1,3 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
+<section class="jobs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="title">Careers</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <p class="text">
+                    At ACA we hire specialists of antiqutity and assistants who
+                    are able to retain a lot of information, our shop and warehouse
+                    contains a lot of products that our customers rely on our staff
+                    to provide information on.
+                </p>
+                <p class="text">
+                    Our Store is located in the heart of london and you'd be more than welcome
+                    to use our <a href="{% url 'contact' %}">contact form </a> if you'd like to introduce
+                    yourself or upload a CV.
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
 {% endblock %}

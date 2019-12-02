@@ -54,7 +54,7 @@ def checkout(request):
                 except stripe.error.CardError:
                     messages.error(request, 'Your card was declined!')
                 if customer.paid:
-                    messages.error(request, 'You\'ve successfully paid')
+                    messages.success(request, 'You\'ve successfully paid')
                     request.session['cart'] = {}
                     return redirect(reverse('products'))
                 else:

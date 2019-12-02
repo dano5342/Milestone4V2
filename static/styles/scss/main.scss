@@ -210,6 +210,11 @@ body{
     color: white;
 }
 
+.c-form { 
+  width: 60%;
+  margin-left: 20%;
+}
+
 
 .cat-container {
   /* padding: 4px; */
@@ -500,7 +505,12 @@ section {
   .cat-container {
     width: 100%
   }
-
+  .c-form {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }  
+  
   /* All Products  */
   .panel-default {
     padding: 8px;
@@ -629,7 +639,9 @@ section {
   #basket-section {
     padding-top: 80px;
   }
-
+  .contact {
+    padding-top: 45px;
+  }
   .items-container {
     background-color: #bfbfbf;
     margin: 12px;
