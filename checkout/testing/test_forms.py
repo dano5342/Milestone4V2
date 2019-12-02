@@ -8,9 +8,8 @@ a django test, This however was manually tested with the given
 stripe test card numbers. Document this in the README.MD
 """
 
-class TestOrderForm(TestCase):
-    
 
+class TestOrderForm(TestCase):
     def test_order_form_is_valid(self):
         form = OrderForm({
             'full_name': 'user432',
