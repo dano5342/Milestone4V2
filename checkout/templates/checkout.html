@@ -16,27 +16,7 @@
 <section class="container cart-container">
     <div class="items-container">
         <div class="row">
-            <div class="col-12 d-md-none">
-                {% for item in cart_items %}
-                {% if item %}
-                <ul>
-                    <li>
-                        <h6 class="title">{{ item.product.title }}</h6>
-                        <div class="row">
-                            <div class="col-12">
-                                <p>Quantity: {{item.quantity}}</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                {% endif %}
-                {% endfor %}
-                <div class="row">
-                <div class="col justify-content-center">
-                    <h3 class="title">Total</h3>
-                    <p class="price"><i class="fas fa-euro-sign"></i> {{ total }}</p>
-                </div></div>
-            </div>
+
             <div class="col-12 col-md-6">
                 <form role="form" method="POST" id="payment-form" action="{% url 'checkout' %}">
                     {% csrf_token %}
@@ -87,10 +67,6 @@
                         </div>
                         {% endif %}
                         {% endfor %}
-                        <div class="row">
-                            <h3 class="title">Total</h3>
-                            <p class="price"><i class="fas fa-euro-sign"></i> {{ total }}</p>
-                        </div>
                     </div>
                 </div>
             </div>

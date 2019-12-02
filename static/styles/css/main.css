@@ -294,7 +294,8 @@ section {
   background-color: #bfbfbf;
   margin: 12px;
   border-radius: 12px;
-  padding: 6px; }
+  padding: 6px;
+  box-shadow: 1px 1px 3px 1px #404040; }
 
 .form-control[name=quantity] {
   border-radius: 5px 0px 0px 5px;
@@ -313,22 +314,19 @@ section {
   margin: 12px;
   padding: 55px;
   height: 100%;
-  border-radius: 12px; }
+  border-radius: 12px;
+  box-shadow: 1px 1px 3px 1px #404040; }
 
 .cart-image {
   width: 125px;
   height: 125px; }
 
-.padding {
-  padding: 12px;
-  margin: 4px; }
-
 .ch-pr-row {
   margin: 4px;
   padding: 5px; }
 
-.remove-but {
-  margin-left: 120px; }
+.but-row {
+  margin-left: 35px; }
 
 /* Footer */
 #sticky-footer {
@@ -363,6 +361,9 @@ section {
   /* Styles */
   body {
     max-width: 100%; }
+
+  section {
+    padding-top: 45px; }
 
   /* Landing Styles */
   .img-container {
@@ -426,11 +427,17 @@ section {
 
   .cart-container {
     margin-top: 8px;
-    padding-top: 65px; }
+    padding-top: 65px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: -12px; }
 
   .remove-but {
     margin-left: 301px;
     margin-bottom: 7px; }
+
+  .but-row {
+    margin-left: 75px; }
 
   .items-container,
   .total-container {
