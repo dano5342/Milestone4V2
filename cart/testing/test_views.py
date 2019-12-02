@@ -11,7 +11,6 @@ class TestCartViews(TestCase):
             username='user789', email='test@user.com', password="456user"
         )
 
-
     def test_cart_view_empty(self):
         page = self.client.get('/cart/')
         self.assertEqual(page.status_code, 200)
@@ -19,15 +18,16 @@ class TestCartViews(TestCase):
 
     """
     Now we've established that the cart page is accessible with a
-    user in the DB, lets check if the cart contents is accessible 
+    user in the DB, lets check if the cart contents is accessible
     we can run CRUD ops on them
     """
+
+
 class TestCartFunctions(TestCase):
 
     def setUp(self):
         self.factory = RequestFactory()
         self.cart_contents = 0
-
 
     def test_empty_cart(self):
         cart_contents = 0

@@ -49,16 +49,18 @@
                  {% endif %}
              </ul>
              <ul class="navbar-nav ml-auto">
-                 <a href="{% url 'view_cart' %}" class="nav-link cart-link">
-                     <li class="nav-item">
+
+                 <li class="nav-item">
+                     <a href="{% url 'view_cart' %}" class="nav-link cart-link">
                          <i class="fas fa-shopping-cart fa-2x"></i>
                          {% if product_count %}
                          <div id="cart">
                              {{ product_count }}
                          </div>
                          {% endif %}
-                     </li>
-                 </a>
+                     </a>
+                 </li>
+
              </ul>
          </div>
      </nav>
