@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
 <div class="container">
     <div class="row info-container">
@@ -19,7 +18,7 @@
             <form method="post" action="{% url 'add_to_cart' product.id%} " class="add-prod">
                 {% csrf_token %}
                 <div class="input-group" class="quantity">
-                    <select name="quantity" id="" class="form-control">
+                    <select name="detailed_quantity" class="form-control">
                         {% for i in i_range %}
                         {% if i == item.quantity %}
                         <option value="{{item.quantity}}" selected>{{item.quantity}}</option>

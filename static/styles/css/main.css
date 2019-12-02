@@ -149,6 +149,9 @@ body {
   padding: inherit;
   vertical-align: inherit; }
 
+.link-unstyled-1:hover {
+  color: white; }
+
 .cat-container {
   /* padding: 4px; */
   transition: filter .5s ease-in-out;
@@ -290,6 +293,12 @@ section {
   border: #404040;
   color: #F2F2F2; }
 
+.form-control[name=detailed_quantity] {
+  border-radius: 5px 0px 0px 5px;
+  background-color: #404040;
+  border: #404040;
+  color: #F2F2F2; }
+
 .total-container {
   background-color: #bfbfbf;
   margin: 12px;
@@ -344,7 +353,6 @@ section {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
   body {
-    padding-top: 35px;
     max-width: 100%; }
 
   /* Landing Styles */
@@ -379,9 +387,10 @@ section {
     padding: 8px;
     margin: 4px; }
 
-  .mbv-bar {
+  .mbv-search {
     width: 70%;
-    margin-right: 12px; }
+    margin-right: 12px;
+    margin-left: 50px; }
 
   .margin {
     margin: 12px; }
@@ -419,7 +428,10 @@ section {
     background-color: #404040;
     position: absolute;
     width: 100%;
-    padding: 4px; } }
+    padding: 4px; }
+
+  .form-control[name=quantity] {
+    margin-top: 16px; } }
 /* Tablets */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .img-container {
@@ -454,7 +466,6 @@ section {
     margin-left: 330px; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   body {
-    padding-top: 12px;
     max-width: 100%; }
 
   .img-container {
@@ -462,6 +473,11 @@ section {
 
   .detail-image {
     height: 35vh; }
+
+  .mbv-search {
+    width: 70%;
+    margin-right: 12px;
+    margin-left: 200px; }
 
   #basket-section {
     padding-top: 80px; }

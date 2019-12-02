@@ -31,7 +31,7 @@
                             <div class="form-group form-margin">
                                 <label for="exampleInputAmount" class="sr-only">New Qty</label>
                                 <div class="input-group">
-                                    <select name="quantity" id="" class="form-control">
+                                    <select name="quantity" class="form-control">
                                         {% for i in i_range %}
                                         {% if i == item.quantity %}
                                         <option value="{{item.quantity}}" selected>{{item.quantity}}</option>
@@ -45,6 +45,7 @@
                             <button type="submit" class="btn btn-success form-margin"><i class="fas fa-edit"></i>
                                 Amend</button>
                         </form>
+                        
                         <small><a href="{% url 'remove_from_cart' item.product.id%}">Remove?</a></small>
                     </div>
                 </div>

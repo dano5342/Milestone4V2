@@ -206,6 +206,10 @@ body{
     vertical-align: inherit;
   }
 }
+.link-unstyled-1:hover {
+    color: white;
+}
+
 
 .cat-container {
   /* padding: 4px; */
@@ -378,7 +382,13 @@ section {
   padding: 6px;
 }
 
- .form-control[name=quantity] {
+.form-control[name=quantity] {
+  border-radius: 5px 0px 0px 5px;
+  background-color: $dark;
+  border: $dark;
+  color: $white
+}
+.form-control[name=detailed_quantity] {
   border-radius: 5px 0px 0px 5px;
   background-color: $dark;
   border: $dark;
@@ -452,7 +462,6 @@ section {
 
   /* Styles */
   body {
-    padding-top: 35px;
     max-width: 100%;
   }
 
@@ -493,9 +502,10 @@ section {
     margin: 4px;
   }
 
-  .mbv-bar {
+  .mbv-search {
     width: 70%;
     margin-right: 12px;
+    margin-left: 50px;
   }
 
   .margin {
@@ -543,6 +553,10 @@ section {
     position: absolute;
     width: 100%;
     padding: 4px;
+  }
+
+  .form-control[name=quantity] {
+    margin-top: 16px;
   }
 }
 
@@ -593,7 +607,6 @@ section {
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   body {
-    padding-top: 12px;
     max-width: 100%;
   }
   .img-container  {
@@ -601,6 +614,11 @@ section {
   }
   .detail-image {
     height: 35vh;
+  }
+  .mbv-search {
+    width: 70%;
+    margin-right: 12px;
+    margin-left: 200px;
   }
 
   #basket-section {

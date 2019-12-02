@@ -15,7 +15,7 @@ def add_to_cart(request, id):
     Add a quantity of the product to the users cart
     """
     
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('detailed_quantity'))
     product = get_object_or_404(Product, pk=id)
     cart = request.session.get('cart', {})
     if id in cart:
